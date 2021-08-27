@@ -3,7 +3,7 @@ import { pinJSONToIPFS } from './pinata.js'
 //Holds all wallet and smart contract interaction functions
 
 require('dotenv').config();
-const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
+const alchemyKey = 'https://eth-ropsten.alchemyapi.io/v2/h5x3NCmpC9vOdUgVaKNtGvkMWsr4afhq';//process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 
