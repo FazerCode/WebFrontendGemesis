@@ -8,15 +8,15 @@ const Styles = styled.div`
     background-color: #333;
     padding: 18px;
   }
-  a, .navbar-nav, .nav-link {
+  a, .navbar-light .navbar-nav .nav-link {
     color: white;
     &:hover {
-      color: red;
+      color: yellow;
     }
     text-decoration: none;
   }
   .navbar-brand {
-      color: white;
+      color: yellow;
       &:hover {
         color: red;
       }
@@ -32,18 +32,18 @@ const NavbarComp = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Item>
-                <Nav.Link>
-                  <Link to="/">Home</Link>
+                <Nav.Link as={Link} to="/">
+                  Home
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link>
-                  <Link to="/about">About</Link>
+                <Nav.Link as={Link} to="/about">
+                  About
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link>
-                  <Link to="/contact">Contact</Link>
+                <Nav.Link as={Link} to="/contact">
+                  Contact
                 </Nav.Link>
               </Nav.Item>
             </Nav>
