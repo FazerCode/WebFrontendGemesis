@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import {
   connectWallet,
-  getCurrentWalletConnected //import here
+  getCurrentWalletConnected,
+  mintNFT
 } from "./utils/interact.js";
-import Web3 from 'web3';
 
 //TODO: MAKE THE NEW HOME?
 const Minter = (props) => {
@@ -28,8 +28,9 @@ const Minter = (props) => {
     setWallet(walletResponse.address);
   };
 
-  const onMintPressed = async () => { //TODO: implement
-
+  const onMintPressed = async () => { 
+    const { status } = await mintNFT(url, name, description);
+    setStatus(status);
   };
 
   return (
@@ -46,7 +47,7 @@ const Minter = (props) => {
       </button>
 
       <br></br>
-      <h1 id="title">🧙‍♂️ Alchemy NFT Minter</h1>
+      <h1 id="title">🧙‍♂️ Gemstone NFT Minter</h1>
       <p>
         Simply add your asset's link, name, and description, then press "Mint."
       </p>
