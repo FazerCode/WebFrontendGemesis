@@ -17,7 +17,7 @@ const Styles = styled.div`
   }
   .navbar-brand {
       color: yellow;
-      &:hover {
+      &:hover {sni
         color: red;
       }
   }
