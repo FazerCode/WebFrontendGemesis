@@ -1,11 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavHashLink as Link } from 'react-router-hash-link';
+// https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
+// import { Link, animateScroll as scroll } from 'react-scroll';
 import { Navbar, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 
 const Styles = styled.div`
   .navbar {
-    background-color: #333;
+    background-color: black;
     padding: 18px;
   }
   a, .navbar-light .navbar-nav .nav-link {
@@ -20,31 +22,43 @@ const Styles = styled.div`
       &:hover {sni
         color: red;
       }
+      margin-left: 55px;
+  }
+
+  .nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .selected {
+    color: red;
   }
 `;
 
 const NavbarComp = () => {
+  const [expanded, setExpanded] = useState(false);
+
     return (
         <Styles>
-        <Navbar expand="lg" >
+        <Navbar bg="dark" expand="lg" fixed="top" expanded={expanded}>
           <Navbar.Brand href="/">G3M$T0N3$</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Item>
-                <Nav.Link as={Link} to="/">
+                <Link to="/" activeClassName="selected" onClick={() => {window.scrollTo(0, 0); setExpanded(false)}}>
                   Home
-                </Nav.Link>
+                </Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/about">
+                <Link smooth to="#minter" activeClassName="selected" onClick={() => setExpanded(false)}>
+                  Minting
+                </Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link smooth to="#about" activeClassName="selected" onClick={() => setExpanded(false)}>
                   About
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/contact">
-                  Contact
-                </Nav.Link>
+                </Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>

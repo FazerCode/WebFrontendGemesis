@@ -34,7 +34,7 @@ const Minter = (props) => {
   };
 
   return (
-    <div className="Minter">
+    <div className="Minter" id="minter">
       <button id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
           "Connected: " +

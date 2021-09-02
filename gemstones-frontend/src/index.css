@@ -19,7 +19,12 @@ code {
   padding: 60px 100px;
   margin: 0 auto;
   text-align: left;
+  margin-top: 70px;
 
+}
+
+.navbar-collapse {
+  text-align: center;
 }
 
 input {
