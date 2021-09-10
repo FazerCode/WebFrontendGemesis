@@ -3,7 +3,7 @@ import {
   connectWallet,
   getCurrentWalletConnected,
   mintNFT
-} from "./utils/interact.js";
+} from "../utils/interact.js";
 
 //TODO: MAKE THE NEW HOME?
 const Minter = (props) => {
@@ -47,7 +47,7 @@ const Minter = (props) => {
       </button>
 
       <br></br>
-      <h1 id="title">🧙‍♂️ Gemstone NFT Minter</h1>
+      <h1 id="title">🧙‍♂️ Gemesis NFT Minter</h1>
       <p>
         Simply add your asset's link, name, and description, then press "Mint."
       </p>

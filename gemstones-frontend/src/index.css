@@ -14,13 +14,18 @@ code {
 }
 
 .Minter {
-  max-width: 80vh;
-  max-height: 80vh;
-  padding: 60px 100px;
+  /* max-width: 80vh;
+  max-height: 80vh; */
+  padding: 60px 80px;
   margin: 0 auto;
   text-align: left;
   margin-top: 70px;
+  width: 100%;
 
+}
+
+.about {
+  margin-top: 150px;
 }
 
 .navbar-collapse {
@@ -77,8 +82,8 @@ button:hover {
 
 #walletButton {
   text-align: right;
-  float:right;
-  margin-bottom: 50px;
+  float: right;
+  margin-top: 50px;
   line-height: 16px;
 }
 /*
