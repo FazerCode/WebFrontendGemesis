@@ -51,7 +51,7 @@ const Minter = (props) => {
 
       <br></br>
       <h1 id="title">🧙‍♂️ Gemesis NFT Minter</h1>
-      <p>
+      {/* <p>
         Simply add your asset's link, name, and description, then press "Mint."
       </p>
       <form>
@@ -73,7 +73,7 @@ const Minter = (props) => {
           placeholder="e.g. Even cooler than cryptokitties ;)"
           onChange={(event) => setDescription(event.target.value)}
         />
-      </form>
+      </form> */}
       <button id="mintButton" onClick={onMintPressed}>
         Mint NFT
       </button>
@@ -90,7 +90,7 @@ const Minter = (props) => {
       window.ethereum.on("accountsChanged", (accounts) => {
         if (accounts.length > 0) {
           setWallet(accounts[0]);
-          setStatus("👆🏽 Write a message in the text-field above.");
+          setStatus("👆🏽 Mint a new NFT here");
         } else {
           setWallet("");
           setStatus("🦊 Connect to Metamask using the top right button.");

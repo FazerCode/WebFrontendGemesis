@@ -1,7 +1,7 @@
 import { pinJSONToIPFS } from './pinata.js'
 
+const metadata = require('../resources/metadata/nft-metadata2.json');
 //Holds all wallet and smart contract interaction functions
-
 require('dotenv').config();
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
@@ -48,21 +48,24 @@ export const connectWallet = async () => {
     }
 };
 
-export const mintNFT = async (url, name, description) => {
+export const mintNFT = async () => {
     //error handling
     //if not formated properly return false
-    if (url.trim() === "" || (name.trim() === "" || description.trim() === "")) {
-        return {
-            success: false,
-            status: "❗Please make sure all fields are completed before minting.",
-        }
-    }
+    // if (url.trim() === "" || (name.trim() === "" || description.trim() === "")) {
+    //     return {
+    //         success: false,
+    //         status: "❗Please make sure all fields are completed before minting.",
+    //     }
+    // }
 
     //make metadata
-    const metadata = {};
-    metadata.name = name;
-    metadata.image = url;
-    metadata.description = description;
+    // const metadata = {};
+    // metadata.name = name;
+    // metadata.image = url;
+    // metadata.description = description;
+
+    // TODO: metadata should be loaded randomly
+    console.log(metadata);
 
     //make pinata call
     const pinataResponse = await pinJSONToIPFS(metadata);
@@ -84,7 +87,7 @@ export const mintNFT = async (url, name, description) => {
     const transactionParameters = {
         to: contractAddress, // Required except during contract publications.   //SENDING ETH TO OUT ADDRESS
         from: window.ethereum.selectedAddress, // must match user's active address.
-        'data': window.contract.methods.mint(window.ethereum.selectedAddress, 8, tokenURI).encodeABI() //make call to NFT smart contract !! Change id on new mint
+        'data': window.contract.methods.mint(window.ethereum.selectedAddress, 12, tokenURI).encodeABI() //make call to NFT smart contract !! Change id on new mint
     };
 
     //sign the transaction via Metamask
@@ -118,7 +121,7 @@ export const getCurrentWalletConnected = async () => {
             if (addressArray.length > 0) {
                 return {
                     address: addressArray[0],
-                    status: "👆🏽 Write a message in the text-field above.",
+                    status: "👆🏽 Mint a new NFT here.",
                 };
             } else {
                 return {
