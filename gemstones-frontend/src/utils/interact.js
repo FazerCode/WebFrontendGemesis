@@ -3,12 +3,12 @@ import { pinJSONToIPFS } from './pinata.js'
 //Holds all wallet and smart contract interaction functions
 
 require('dotenv').config();
-const alchemyKey = 'https://eth-ropsten.alchemyapi.io/v2/h5x3NCmpC9vOdUgVaKNtGvkMWsr4afhq';//process.env.REACT_APP_ALCHEMY_KEY;
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 
 const contractABI = require('../contract-abi.json') //CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED
-const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"; //HERE WE SHOULD ADD OUR CONTRACT ADDRESS
+const contractAddress = "0x6D3bCd6C1E89956BD92bD4b679191abD7798174d"; //HERE WE SHOULD ADD OUR CONTRACT ADDRESS
 
 
 //Connects the wallet to the site/blockchain
@@ -78,12 +78,13 @@ export const mintNFT = async (url, name, description) => {
 
     //Set contract
     window.contract = await new web3.eth.Contract(contractABI, contractAddress);
+    console.log(window.contract);
 
     //set up your Ethereum transaction
     const transactionParameters = {
         to: contractAddress, // Required except during contract publications.   //SENDING ETH TO OUT ADDRESS
         from: window.ethereum.selectedAddress, // must match user's active address.
-        'data': window.contract.methods.mintNFT(window.ethereum.selectedAddress, tokenURI).encodeABI()//make call to NFT smart contract 
+        'data': window.contract.methods.mint(window.ethereum.selectedAddress, 8, tokenURI).encodeABI() //make call to NFT smart contract !! Change id on new mint
     };
 
     //sign the transaction via Metamask
