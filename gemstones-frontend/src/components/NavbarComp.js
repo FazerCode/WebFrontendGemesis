@@ -9,8 +9,12 @@ import Scrollspy from 'react-scrollspy';
 
 const Styles = styled.div`
   .navbar {
-    background-color: black;
+    background-color: transparent;
     padding: 18px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
   a, .navbar-light .navbar-nav .nav-link {
     color: white;
@@ -19,9 +23,10 @@ const Styles = styled.div`
     }
     text-decoration: none;
   }
+  
   .navbar-brand {
       color: yellow;
-      &:hover {sni
+      &:hover {
         color: red;
       }
       margin-left: 55px;
@@ -31,9 +36,10 @@ const Styles = styled.div`
     padding-left: 10px;
     padding-right: 10px;
   }
-
-  .selected {
-    color: red;
+  
+  .bg-dark {
+    position: fixed;
+    background-color: black;
   }
 
   .is-current {
@@ -46,19 +52,28 @@ const Styles = styled.div`
 }
 `;
 
-const NavbarComp = (activeLink) => {
+const NavbarComp = () => {
   const [expanded, setExpanded] = useState(false);
 
-    return (
-        <Styles>
-        <Navbar bg="dark" expand="lg" fixed="top" expanded={expanded}>
-          <Navbar.Brand href="/">Gemesis</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
-          <Navbar.Collapse id="basic-navbar-nav">
+  window.addEventListener("scroll", function () {
+    var value = window.scrollY;
+    if (value > 100) {
+      document.querySelector(".navbar").classList.add("bg-dark");
+    } else {
+      document.querySelector(".navbar").classList.remove("bg-dark");
+    }
+  });
+
+  return (
+    <Styles>
+      <Navbar expanded={expanded}>
+        <Navbar.Brand href="/">Gemesis</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-          <Scrollspy items={ ['home', 'about', 'minter', 'roadmap', 'team'] } currentClassName="is-current">
+            <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">
               <Nav.Item>
-                <Link to="/" onClick={() => {window.scrollTo(0, 0); setExpanded(false)}}>
+                <Link to="/" onClick={() => { window.scrollTo(0, 0); setExpanded(false) }}>
                   Home
                 </Link>
               </Nav.Item>
@@ -94,12 +109,12 @@ const NavbarComp = (activeLink) => {
               </Nav.Item>
 
             </Scrollspy>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <Navbar />
-      </Styles >
-    )
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <Navbar />
+    </Styles >
+  )
 }
 
 

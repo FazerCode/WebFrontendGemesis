@@ -1,29 +1,20 @@
 import React from 'react';
-import VisibilitySensor from "react-visibility-sensor";
+import Image from '../resources/background.jpg'
 
-const Home = ({changeActiveLink}) => {
+const Home = () => {
 
-    function onChange (isVisible) {
-        console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
-      }
-   
+
     return (
-
-        <VisibilitySensor onChange={onChange}>
-              <div className="container" id="home">
-        <p>HOME</p>
-        {/* <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p>
-        <p>HOME</p> */}
-    </div>
-        </VisibilitySensor>
+        <div className="container" style={{ marginBottom: 500}} >
+            <div
+                style={{ backgroundImage: 'url(' + Image + ')' }}
+                className="background" id="home">
+                <div className="container" style={{ marginTop: 200,  color: 'white'}}>
+                    <p>Welcome to Gemesis</p>
+    
+                </div>
+            </div>
+        </div>
     );
 }
 

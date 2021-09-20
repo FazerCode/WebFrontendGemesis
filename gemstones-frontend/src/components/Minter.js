@@ -6,14 +6,14 @@ import {
 } from "../utils/interact.js";
 
 //TODO: MAKE THE NEW HOME?
-const Minter = (props) => {
+const Minter = () => {
 
   //State variables
   const [walletAddress, setWallet] = useState("");    //users wallet address
   const [status, setStatus] = useState("");  //User replies with string written to contract
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [url, setURL] = useState("");
+  const [name] = useState("");
+  const [description] = useState("");
+  const [url] = useState("");
 
   useEffect(() => {
     async function connect() {

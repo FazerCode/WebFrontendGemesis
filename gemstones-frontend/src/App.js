@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import NavbarComp from './components/NavbarComp';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
@@ -13,30 +13,23 @@ import Footer from './components/Footer/Footer';
 
 const App = () => {
 
-  const [activeLink, setActiveLink] = useState(null);
-
-  const changeActiveLink = (link) => {
-    console.log(link);
-    // setActiveLink(link);
-  }
-  
-    return (
+  return (
     <>
       <Router>
-      <NavbarComp activeLink={activeLink} style={{marginBot: 50}}/>
-      <Switch>
-        <Route path="/">
-          <div style={{marginTop: 50}}>
-            <Home changeActiveLink={changeActiveLink} />
-            <About changeActiveLink={changeActiveLink} />
-            <Minter changeActiveLink={changeActiveLink} />
-            <Roadmap changeActiveLink={changeActiveLink} />
-            <Team changeActiveLink={changeActiveLink} />
-          </div>
-        </Route>
-      </Switch>
-    </Router>
-    <Footer />
+        <NavbarComp style={{ marginBot: 50 }} />
+        <Switch>
+          <Route path="/">
+            <div style={{ marginTop: 50, display: 'flex', flexDirection: 'column'}}>
+              <Home />
+              <About />
+              <Minter />
+              <Roadmap />
+              <Team />
+            </div>
+          </Route>
+        </Switch>
+      </Router>
+      <Footer />
 
     </>
   );
