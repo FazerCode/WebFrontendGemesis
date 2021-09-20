@@ -7,8 +7,10 @@ const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 
-const contractABI = require('../contract-abi.json') //CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED
-const contractAddress = "0x6D3bCd6C1E89956BD92bD4b679191abD7798174d"; //HERE WE SHOULD ADD OUR CONTRACT ADDRESS
+// const contractABI = require('../contract-abi.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
+const contractABI = require('../contract-abi2.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
+// const contractAddress = "0x6D3bCd6C1E89956BD92bD4b679191abD7798174d"; //HERE WE SHOULD ADD OUR CONTRACT ADDRESS
+const contractAddress = "0xC2717d0dB33Ca0CE41f25a2E35975cb0231F1F75";
 
 
 //Connects the wallet to the site/blockchain
@@ -87,7 +89,8 @@ export const mintNFT = async () => {
     const transactionParameters = {
         to: contractAddress, // Required except during contract publications.   //SENDING ETH TO OUT ADDRESS
         from: window.ethereum.selectedAddress, // must match user's active address.
-        'data': window.contract.methods.mint(window.ethereum.selectedAddress, 12, tokenURI).encodeABI() //make call to NFT smart contract !! Change id on new mint
+        value: parseInt(web3.utils.toWei("0.0001","ether")).toString(16), // set mint price
+        'data': window.contract.methods.mint(window.ethereum.selectedAddress, tokenURI).encodeABI() //make call to NFT smart contract !! Change id on new mint
     };
 
     //sign the transaction via Metamask
