@@ -9,13 +9,9 @@ import Scrollspy from 'react-scrollspy';
 
 const Styles = styled.div`
 
-  background-color: blue;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   .navbar-collapse {
     text-align: center;
+    justify-content: flex-end;
   }
 
   .navbar-brand {
@@ -27,6 +23,10 @@ const Styles = styled.div`
   } 
 
   @media (max-width: 991.98px) {
+    .navbar-collapse {
+      background-color: #212529;
+    }
+    
     ul {
       display: flex;
       flex-direction: column;
@@ -36,10 +36,14 @@ const Styles = styled.div`
   ul {
     margin-top: 15px;
     display: flex;
+    justify-content: flex-end;
+
   }
 
-  a, .navbar-light .navbar-nav .nav-link {
+  a, .navbar-nav .nav-link {
     color: white;
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px black; /* width and color */
     padding: 10px;
     &:hover {
       color: yellow;
@@ -56,21 +60,20 @@ const Styles = styled.div`
     }
   }
 
-  // .navbar {
-  //   background-color: transparent;
-  //   padding: 18px;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   z-index: 1030;
-  // }
+  .navbar {
+    position: fixed;
+    background-color: rgba(255,255,255,0.2);
+    padding: 18px;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
 
-  // .bg-dark {
-  //   position: fixed;
-  //   background-color: black;
-  // }
-
-  
+  .bg-dark {
+    position: fixed;
+    background-color: black;
+  }
 `;
 
 const NavbarComp = () => {
@@ -87,7 +90,7 @@ const NavbarComp = () => {
 
   return (
     <Styles>
-      <Navbar expand="lg" bg="dark" variant="dark" fixed="top" expanded={expanded}>
+      <Navbar expand="lg" expanded={expanded}>
         <Navbar.Brand href="/">Gemesis</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
         <Navbar.Collapse id="responsive-navbar-nav">

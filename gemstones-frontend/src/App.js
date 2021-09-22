@@ -19,7 +19,7 @@ const App = () => {
         <NavbarComp />
         <Switch>
           <Route path="/">
-            <div style={{ marginTop: 50, display: 'flex', flexDirection: 'column'}}>
+            <div style={{ paddingTop: 200, display: 'flex', flexDirection: 'column'}}>
               <Home />
               <About />
               <Minter />
