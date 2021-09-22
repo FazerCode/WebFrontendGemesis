@@ -8,38 +8,43 @@ import Scrollspy from 'react-scrollspy';
 // https://codesandbox.io/s/o4ws2
 
 const Styles = styled.div`
-  .navbar {
-    background-color: transparent;
-    padding: 18px;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .navbar-collapse {
+    text-align: center;
   }
+
+  .navbar-brand {
+    color: yellow;
+    &:hover {
+      color: red;
+    }
+    margin-left: 55px;
+  } 
+
+  @media (max-width: 991.98px) {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+ 
+  ul {
+    margin-top: 15px;
+    display: flex;
+  }
+
   a, .navbar-light .navbar-nav .nav-link {
     color: white;
+    padding: 10px;
     &:hover {
       color: yellow;
     }
     text-decoration: none;
-  }
-  
-  .navbar-brand {
-      color: yellow;
-      &:hover {
-        color: red;
-      }
-      margin-left: 55px;
-  }
-
-  .nav-item {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  .bg-dark {
-    position: fixed;
-    background-color: black;
   }
 
   .is-current {
@@ -49,7 +54,23 @@ const Styles = styled.div`
             width: 100%;
         }
     }
-}
+  }
+
+  // .navbar {
+  //   background-color: transparent;
+  //   padding: 18px;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   z-index: 1030;
+  // }
+
+  // .bg-dark {
+  //   position: fixed;
+  //   background-color: black;
+  // }
+
+  
 `;
 
 const NavbarComp = () => {
@@ -66,11 +87,11 @@ const NavbarComp = () => {
 
   return (
     <Styles>
-      <Navbar expanded={expanded}>
+      <Navbar expand="lg" bg="dark" variant="dark" fixed="top" expanded={expanded}>
         <Navbar.Brand href="/">Gemesis</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav>
             <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">
               <Nav.Item>
                 <Link to="/" onClick={() => { window.scrollTo(0, 0); setExpanded(false) }}>
@@ -98,12 +119,12 @@ const NavbarComp = () => {
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <a href="https://twitter.com/Fazer_Crypto" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
+                <a href="https://twitter.com/gemesis_" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
                   <FaTwitter />
                 </a>
               </Nav.Item>
               <Nav.Item>
-                <a href="https://discord.gg/ABMmb9JX" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
+                <a href="https://discord.gg/e58sqmsn" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
                   <FaDiscord />
                 </a>
               </Nav.Item>
@@ -112,7 +133,6 @@ const NavbarComp = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Navbar />
     </Styles >
   )
 }

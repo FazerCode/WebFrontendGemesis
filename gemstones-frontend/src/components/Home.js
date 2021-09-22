@@ -8,7 +8,8 @@ const Home = () => {
         <div className="container" style={{ marginBottom: 500}} >
             <div
                 style={{ backgroundImage: 'url(' + Image + ')' }}
-                className="background" id="home">
+                className="background" id="home"
+                >
                 <div className="container" style={{ marginTop: 200,  color: 'white'}}>
                     <p>Welcome to Gemesis</p>
     

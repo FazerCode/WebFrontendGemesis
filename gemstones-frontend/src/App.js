@@ -16,7 +16,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <NavbarComp style={{ marginBot: 50 }} />
+        <NavbarComp />
         <Switch>
           <Route path="/">
             <div style={{ marginTop: 50, display: 'flex', flexDirection: 'column'}}>
