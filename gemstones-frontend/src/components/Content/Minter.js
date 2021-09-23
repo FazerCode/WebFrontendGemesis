@@ -3,7 +3,7 @@ import {
   connectWallet,
   getCurrentWalletConnected,
   mintNFT
-} from "../utils/interact.js";
+} from "../../utils/interact";
 
 //TODO: MAKE THE NEW HOME?
 const Minter = () => {

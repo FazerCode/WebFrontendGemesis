@@ -1,6 +1,10 @@
 .App {
     text-align: center;
   }
+
+  html, body, #app, #app>div {
+    height: 100%
+  }
   
   .App-logo {
     height: 40vmin;
@@ -28,9 +32,11 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    background-image: url('./resources/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   @media (max-width: 991.98px) {
@@ -40,16 +46,27 @@
       position: absolute;
       top: 0px;
       left: 0px;
+      background-image: url('./resources/background.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      background-attachment: fixed;
     }
-    
+
   }
 
-  .about-info, .roadmap-info{
+  .home {
+    height: 100vh;
+  }
+
+  .about-info {
+    padding-top: 180px;
+  }
+
+  .roadmap-info{
     padding-top: 150px;
   }
+
   .roadmap-info, .team-info, .minter {
     padding-top: 140px;
   }

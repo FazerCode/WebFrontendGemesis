@@ -2,20 +2,19 @@ import './App.css';
 import React from 'react';
 import NavbarComp from './components/Header/NavbarComp';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import Minter from './components/Minter'
-import About from './components/About';
-import Roadmap from './components/Roadmap';
-import Team from './components/Team';
+import Home from './components/Content/Home';
+import Minter from './components/Content/Minter'
+import About from './components/Content/About';
+import Roadmap from './components/Content/Roadmap';
+import Team from './components/Content/Team';
 import Footer from './components/Footer/Footer';
-import Image from './resources/background.jpg'
 
 // DATA AOS for animated components on scrolling
 
 const App = () => {
 
   return (
-    <div style={{ backgroundImage: 'url(' + Image + ')'}} className="background" id="home">
+    <div className="background">
       <Router>
         <NavbarComp />
         <Switch>
@@ -27,7 +26,6 @@ const App = () => {
               <Roadmap />
               <Team />
               <Footer />
-
             </div>
           </Route>
         </Switch>

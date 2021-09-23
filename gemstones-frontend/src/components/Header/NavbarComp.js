@@ -59,7 +59,7 @@ const Styles = styled.div`
 
   .navbar {
     position: fixed;
-    background-color: rgba(255,255,255,0.2);
+    background-color: black;
     padding: 18px;
     top: 0;
     right: 0;
@@ -67,10 +67,10 @@ const Styles = styled.div`
     z-index: 1030;
   }
 
-  .bg-dark {
-    position: fixed;
-    background-color: black;
-  }
+  // .bg-dark {
+  //   position: fixed;
+  //   background-color: black;
+  // }
 
   .navbar-toggler {
     border-color: rgb(248, 186, 2);
@@ -80,19 +80,19 @@ const Styles = styled.div`
 const NavbarComp = () => {
   const [expanded, setExpanded] = useState(false);
 
-  window.addEventListener("scroll", function () {
-    var value = window.scrollY;
-    if (value > 100) {
-      document.querySelector(".navbar").classList.add("bg-dark");
-    } else {
-      document.querySelector(".navbar").classList.remove("bg-dark");
-    }
-  });
+  // window.addEventListener("scroll", function () {
+  //   var value = window.scrollY;
+  //   if (value > 100) {
+  //     document.querySelector(".navbar").classList.add("bg-dark");
+  //   } else {
+  //     document.querySelector(".navbar").classList.remove("bg-dark");
+  //   }
+  // });
 
   return (
     <Styles>
       <Navbar expand="lg" expanded={expanded}>
-        <Navbar.Brand href="/">Gemesis</Navbar.Brand>
+        <Navbar.Brand href="/">GΞMΞSIS</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
           { expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" /> }
           </Navbar.Toggle>
