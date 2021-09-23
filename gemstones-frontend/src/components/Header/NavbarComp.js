@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import { Navbar, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
-import { FaDiscord, FaTwitter } from 'react-icons/fa';
+import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
+import { AiOutlineClose } from 'react-icons/ai';
 import Scrollspy from 'react-scrollspy';
 
 // https://codesandbox.io/s/o4ws2
@@ -19,14 +20,10 @@ const Styles = styled.div`
     &:hover {
       color: red;
     }
-    margin-left: 55px;
+    margin-left: 25px;
   } 
 
   @media (max-width: 991.98px) {
-    .navbar-collapse {
-      background-color: #212529;
-    }
-    
     ul {
       display: flex;
       flex-direction: column;
@@ -43,7 +40,7 @@ const Styles = styled.div`
   a, .navbar-nav .nav-link {
     color: white;
     font-weight: bold;
-    -webkit-text-stroke: 0.5px black; /* width and color */
+    -webkit-text-stroke: 0.5px black;
     padding: 10px;
     &:hover {
       color: yellow;
@@ -74,6 +71,10 @@ const Styles = styled.div`
     position: fixed;
     background-color: black;
   }
+
+  .navbar-toggler {
+    border-color: rgb(248, 186, 2);
+  }
 `;
 
 const NavbarComp = () => {
@@ -92,7 +93,9 @@ const NavbarComp = () => {
     <Styles>
       <Navbar expand="lg" expanded={expanded}>
         <Navbar.Brand href="/">Gemesis</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
+          { expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" /> }
+          </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">

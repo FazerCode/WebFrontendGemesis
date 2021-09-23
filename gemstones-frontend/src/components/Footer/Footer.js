@@ -24,13 +24,13 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Social Media</Heading>
-            <FooterLink href="https://twitter.com/Fazer_Crypto" target="_blank" rel="noopener noreferrer">
-                <span style={{ marginLeft: "60px"}}>
+            <FooterLink href="https://twitter.com/gemesis_" target="_blank" rel="noopener noreferrer">
+                <span>
                     <FaTwitter />
                 </span>
             </FooterLink>
-            <FooterLink href="https://discord.gg/ABMmb9JX" target="_blank" rel="noopener noreferrer">
-                <span style={{ marginLeft: "60px"}}>
+            <FooterLink href="https://discord.gg/e58sqmsn" target="_blank" rel="noopener noreferrer">
+                <span>
                     <FaDiscord />
                 </span>
             </FooterLink>

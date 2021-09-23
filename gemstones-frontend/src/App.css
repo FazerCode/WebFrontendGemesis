@@ -24,7 +24,7 @@
 
   .background {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -36,7 +36,7 @@
   @media (max-width: 991.98px) {
     .background {
       width: 100%;
-      height: 50vh;
+      height: 100%;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -44,6 +44,7 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+    
   }
 
   .about-info, .roadmap-info{
