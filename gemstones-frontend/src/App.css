@@ -55,7 +55,7 @@
 
   }
 
-  .home {
+  .home, .roadmap, .Minter, .team{
     height: 100vh;
   }
 
@@ -63,11 +63,16 @@
     padding-top: 180px;
   }
 
-  .roadmap-info{
-    padding-top: 150px;
-  }
-
   .roadmap-info, .team-info, .minter {
     padding-top: 140px;
   }
   
+  .Minter {
+    padding: 60px 80px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 100%;
+  
+  }

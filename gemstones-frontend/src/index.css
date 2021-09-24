@@ -13,21 +13,6 @@ code {
     monospace;
 }
 
-.Minter {
-  /* max-width: 80vh;
-  max-height: 80vh; */
-  padding: 60px 80px;
-  margin: 0 auto;
-  text-align: left;
-  margin-top: 70px;
-  width: 100%;
-
-}
-
-.about {
-  margin-top: 150px;
-}
-
 input {
   border-top-style: hidden;
   border-right-style: hidden;
