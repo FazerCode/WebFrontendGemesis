@@ -10,7 +10,13 @@ const web3 = createAlchemyWeb3(alchemyKey);
 // const contractABI = require('./contract-abi.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
 const contractABI = require('./contract-abi2.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
 // const contractAddress = "0x6D3bCd6C1E89956BD92bD4b679191abD7798174d"; //HERE WE SHOULD ADD OUR CONTRACT ADDRESS
-const contractAddress = "0xC2717d0dB33Ca0CE41f25a2E35975cb0231F1F75";
+const contractAddress = "0x35B8e7C3036c4A3f38b82C7fdf650a7C6FCCe5d7";
+
+
+var dateTimeStamp = web3.eth.getBlock(1920050).timestamp //outputs 1469021581 
+var d = new Date(dateTimeStamp * 1000) //x1000 to convert from seconds to milliseconds 
+var s = d.toUTCString() 
+s = s.substring(0,s.indexOf("GMT")) + "UTC" //change the confusing 'GMT' to 'UTC'
 
 
 //Connects the wallet to the site/blockchain
@@ -50,6 +56,8 @@ export const connectWallet = async () => {
     }
 };
 
+
+
 export const mintNFT = async () => {
     //error handling
     //if not formated properly return false
@@ -85,6 +93,17 @@ export const mintNFT = async () => {
     window.contract = await new web3.eth.Contract(contractABI, contractAddress);
     console.log(window.contract);
 
+    //
+    var mintUpdateEvent = window.contract.events.MintCooldownUpdated(function(error, result){
+        if(error)
+        {
+            console.log(error);
+            return
+        }
+        console.log(result);
+        return result;
+    })
+
     //set up your Ethereum transaction
     const transactionParameters = {
         to: contractAddress, // Required except during contract publications.   //SENDING ETH TO OUT ADDRESS
@@ -102,7 +121,9 @@ export const mintNFT = async () => {
             });
         return {
             success: true,
-            status: "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash
+            status: "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash + "\n"
+            + "TimeStamp of mint: " + mintUpdateEvent.args.timeStamp + " Minter: " + mintUpdateEvent.args.minter
+
         }
     } catch (error) {
         return {
