@@ -92,6 +92,7 @@ export const mintNFT = async () => {
     //Set contract
     window.contract = await new web3.eth.Contract(contractABI, contractAddress);
     console.log(window.contract);
+    console.log(window.contract.methods.totalSupply());
 
     //
     var mintUpdateEvent = window.contract.events.MintCooldownUpdated(function(error, result){
