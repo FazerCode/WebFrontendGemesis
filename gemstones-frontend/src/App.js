@@ -6,7 +6,7 @@ import Home from './components/Content/Home';
 import Minter from './components/Content/Minter'
 import About from './components/Content/About';
 import Roadmap from './components/Content/Roadmap';
-import Team from './components/Content/Team';
+import Team from './components/Content/Team/Team';
 import Footer from './components/Footer/Footer';
 
 // DATA AOS for animated components on scrolling
