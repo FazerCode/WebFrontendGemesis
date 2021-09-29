@@ -19,17 +19,18 @@ const App = () => {
         <NavbarComp />
         <Switch>
           <Route path="/">
-            <div>
+            <div class="content">
               <Home />
               <About />
               <Minter />
               <Roadmap />
-              <Team />
-              <Footer />
+              <Team />   
+
             </div>
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }

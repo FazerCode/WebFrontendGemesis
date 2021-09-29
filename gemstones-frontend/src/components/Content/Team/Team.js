@@ -7,8 +7,11 @@ import logo4 from "../../../resources/babyFalco4.jpg"
 
 const TeamContainer = styled.div`
     display: flex;
-    flexDirection: 'column';
-    justifyContent: 'space-between';
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 800px) {
+        flex-direction: column;
+      }
 `;
 
 export const Column = styled.div`
