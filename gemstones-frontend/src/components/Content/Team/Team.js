@@ -11,7 +11,8 @@ import logo4 from "../../../resources/babyFalco4.jpg"
 const TeamContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     @media (max-width: 800px) {
         flex-direction: column;
       }
@@ -19,10 +20,9 @@ const TeamContainer = styled.div`
 
 export const Column = styled.div`
     margin: 10px;
-
 `;
 
-// TODO: Flex alignment to mobile etc. missing - https://mdbootstrap.com/docs/react/utilities/flexbox/
+// TODO: 
 
 const Team = () => {
     useEffect(() => {

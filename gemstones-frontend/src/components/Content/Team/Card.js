@@ -4,8 +4,8 @@ const CardContainer = styled.div`
     background-color: black;
     resizeMode: 'cover';
     box-shadow: 5px 10px 8px 0 rgba(0,0,0,0.7);
-    height: 400px;
-    width: 320px;
+    height: 420px;
+    width: 330px;
     display: table-cell;
     vertical-align: bottom;
     border-radius: 20px;
