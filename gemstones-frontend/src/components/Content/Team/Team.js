@@ -1,3 +1,6 @@
+import { React, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Card from "./Card";
 import styled from "styled-components";
 import logo from "../../../resources/babyFalco.png"
@@ -22,8 +25,13 @@ export const Column = styled.div`
 // TODO: Flex alignment to mobile etc. missing - https://mdbootstrap.com/docs/react/utilities/flexbox/
 
 const Team = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      });
+
     return (
-        <div className="container team" id="team">
+        <div className="container team" id="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <h1>Our Team</h1>
             <TeamContainer className="team-info">
                 <Column>

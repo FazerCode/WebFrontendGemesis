@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   connectWallet,
   getCurrentWalletConnected,
@@ -15,6 +17,10 @@ const Minter = () => {
   const [description] = useState("");
   const [url] = useState("");
 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  });
   useEffect(() => {
     async function connect() {
       const { address, status } = await getCurrentWalletConnected();
@@ -37,7 +43,7 @@ const Minter = () => {
   };
 
   return (
-    <div className="Minter" id="minter">
+    <div className="Minter" id="minter" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
       <button id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
           "Connected: " +
@@ -51,29 +57,6 @@ const Minter = () => {
 
       <br></br>
       <h1 id="title">🧙‍♂️ Gemesis NFT Minter</h1>
-      {/* <p>
-        Simply add your asset's link, name, and description, then press "Mint."
-      </p>
-      <form>
-        <h2>🖼 Link to asset: </h2>
-        <input
-          type="text"
-          placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
-          onChange={(event) => setURL(event.target.value)}
-        />
-        <h2>🤔 Name: </h2>
-        <input
-          type="text"
-          placeholder="e.g. My first NFT!"
-          onChange={(event) => setName(event.target.value)}
-        />
-        <h2>✍️ Description: </h2>
-        <input
-          type="text"
-          placeholder="e.g. Even cooler than cryptokitties ;)"
-          onChange={(event) => setDescription(event.target.value)}
-        />
-      </form> */}
       <button id="mintButton" onClick={onMintPressed}>
         Mint NFT
       </button>
