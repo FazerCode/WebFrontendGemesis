@@ -6,7 +6,7 @@ import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import Scrollspy from 'react-scrollspy';
 // import logo from "../../resources/gemesis_logo.png"
-import logo from "../../resources/babyFalco.png"
+import logo from "../../resources/gemesis_logo.png";
 
 // https://codesandbox.io/s/o4ws2
 
@@ -69,6 +69,12 @@ const Styles = styled.div`
     z-index: 1030;
   }
 
+  .navbar-brand {
+    padding: 7px 14px;
+    position: relative;
+    z-index: 1;
+  }
+
   // .bg-dark {
   //   position: fixed;
   //   background-color: black;
@@ -92,17 +98,14 @@ const NavbarComp = () => {
   //   }
   // });
 
-  var icon = (
-    <span class="logo">
-      <a href="/">
-        <img src="../../resources/gemesis_logo.png" height="150" width="120" alt="GAY" /></a>
-    </span>
-  );
-
   return (
     <Styles>
+      <h1>Test</h1>
       <Navbar expand="lg" expanded={expanded}>
-        <Navbar.Brand brand={ icon } href="/">
+        <Navbar.Brand >
+          <a href="/">
+            <img width="70px" height="auto" className="img-responsive" src={logo} alt="logo" />
+          </a>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
           {expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
