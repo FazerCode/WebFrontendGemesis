@@ -67,6 +67,7 @@ const Styles = styled.div`
     right: 0;
     left: 0;
     z-index: 1030;
+    box-shadow: 0px 2px 5px #303030;
   }
 
   .navbar-brand {
