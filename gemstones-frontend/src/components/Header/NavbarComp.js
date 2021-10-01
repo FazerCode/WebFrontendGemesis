@@ -92,9 +92,7 @@ const NavbarComp = () => {
   return (
     <Styles>
       <Navbar expand="lg" expanded={expanded}>
-          <Typography variant="title" >
-            <img src='C:\Users\Despot\OneDrive\Dokumente\NFTProj\WebFrontendGemstones\src\resources\gemesis_logo.png' width={182} height={64} />
-          </Typography>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
           { expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" /> }
           </Navbar.Toggle>
