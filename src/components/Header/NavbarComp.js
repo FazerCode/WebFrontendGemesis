@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import Scrollspy from 'react-scrollspy';
+// import logo from "../../resources/gemesis_logo.png"
+import logo from "../../resources/babyFalco.png"
 
 // https://codesandbox.io/s/o4ws2
 
@@ -90,13 +92,21 @@ const NavbarComp = () => {
   //   }
   // });
 
+  var icon = (
+    <span class="logo">
+      <a href="/">
+        <img src="../../resources/gemesis_logo.png" height="150" width="120" alt="GAY" /></a>
+    </span>
+  );
+
   return (
     <Styles>
       <Navbar expand="lg" expanded={expanded}>
-        <Navbar.Brand href="/">GΞMΞSIS</Navbar.Brand>
+        <Navbar.Brand brand={ icon } href="/">
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
-          { expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" /> }
-          </Navbar.Toggle>
+          {expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
+        </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">

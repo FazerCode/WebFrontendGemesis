@@ -13,10 +13,10 @@ const contractABI = require('./contract-abi2.json') //!!CHANGE THE CONTRACT ABI 
 const contractAddress = "0x35B8e7C3036c4A3f38b82C7fdf650a7C6FCCe5d7";
 
 
-var dateTimeStamp = web3.eth.getBlock(1920050).timestamp //outputs 1469021581 
-var d = new Date(dateTimeStamp * 1000) //x1000 to convert from seconds to milliseconds 
-var s = d.toUTCString() 
-s = s.substring(0,s.indexOf("GMT")) + "UTC" //change the confusing 'GMT' to 'UTC'
+// var dateTimeStamp = web3.eth.getBlock(1920050).timestamp //outputs 1469021581 
+// var d = new Date(dateTimeStamp * 1000) //x1000 to convert from seconds to milliseconds 
+// var s = d.toUTCString() 
+// s = s.substring(0,s.indexOf("GMT")) + "UTC" //change the confusing 'GMT' to 'UTC'
 
 
 //Connects the wallet to the site/blockchain

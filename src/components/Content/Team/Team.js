@@ -21,6 +21,7 @@ const TeamContainer = styled.div`
 export const Column = styled.div`
     @media (max-width: 800px) {
         margin: 10px;
+        alignt-content: center;
     }
 `;
 

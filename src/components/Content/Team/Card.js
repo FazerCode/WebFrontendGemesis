@@ -31,7 +31,7 @@ const Image = styled.img`
 
 const Card = ({member, role, image}) => {
     return (
-        <div class="container">
+        <div className="container">
             <CardContainer>
                 <Image src={image} alt="member"></Image>
                 <Description>
