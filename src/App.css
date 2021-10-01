@@ -1,15 +1,30 @@
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+  
   .App {
     text-align: center;
   }
 
   html, body, #app, #app>div {
-    height: 100%
+    height: 100%;
   }
 
   body {
+    color: white;
     margin-bottom: 100px;
     position: relative;
-    min-height: 100vh;
+    width: 100%;
+    height: auto;
+    /* background */
+    /* overflow-y: hidden ! important;
+    overflow-x: hidden ! important; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    background-image: url('./resources/background.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   
   .App-logo {
@@ -43,35 +58,6 @@
     justify-content: space-between;
   }
 
-  .background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-image: url('./resources/background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
-  @media (max-width: 991.98px) {
-    .background {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      background-image: url('./resources/background.jpg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-  }
-
   .home, .roadmap, .Minter{
     height: 100vh;
   }
@@ -99,3 +85,80 @@
     width: 100%;
   
   }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    font-size: 16px;
+    width: 100%;
+    border-color: rgba(4, 4, 5, 0.1);
+    line-height: 32px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: rgba(4, 4, 5, 0.4);
+  }
+  
+  
+  button {
+    padding: 9px 16px;
+    max-height: 40px;
+    box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 20%);
+    border-color: #254cdd;
+    color: #254cdd;
+    background-color: rgb(235, 235, 235);
+    border-radius: 50;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    font-weight: bold;
+    cursor:pointer;
+  }
+  
+  button:hover {
+    margin-top: -1px;
+  }
+  
+  #title {
+    padding-top: 32px;
+  }
+  
+  .uploadFile {
+    border: 4px dashed rgba(4, 4, 5, 0.1);
+    border-radius: 16px;
+    text-align: center;
+    padding: 32px 60px;
+  }
+  
+  #walletButton {
+    text-align: right;
+    float: right;
+    margin-top: 50px;
+    line-height: 16px;
+  }
+  /*
+  #walletButton:focus {
+    outline:none;
+    border: none;
+  }
+  
+  #walletButton:hover {
+    outline:none;
+    border :none;
+  } */
+  
+  #mintButton {
+    margin-top: 40px;
+    background-color: #254cdd;
+    color:white;
+  }
+

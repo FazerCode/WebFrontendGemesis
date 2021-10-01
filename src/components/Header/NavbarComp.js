@@ -75,6 +75,7 @@ const Styles = styled.div`
   .navbar-toggler {
     border-color: rgb(248, 186, 2);
   }
+  
 `;
 
 const NavbarComp = () => {

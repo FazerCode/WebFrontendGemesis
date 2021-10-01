@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import React from 'react';
 import NavbarComp from './components/Header/NavbarComp';
@@ -14,7 +15,7 @@ import Footer from './components/Footer/Footer';
 const App = () => {
 
   return (
-    <div className="background">
+    <div >
       <Router>
         <NavbarComp />
         <Switch>
