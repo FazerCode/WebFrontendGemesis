@@ -5,7 +5,7 @@ const CardContainer = styled.div`
     resizeMode: 'cover';
     box-shadow: 5px 10px 8px 0 rgba(0,0,0,0.7);
     height: 420px;
-    width: 330px;
+    width: 290px;
     display: table-cell;
     vertical-align: bottom;
     border-radius: 20px;

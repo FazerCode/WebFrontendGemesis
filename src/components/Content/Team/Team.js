@@ -19,7 +19,9 @@ const TeamContainer = styled.div`
 `;
 
 export const Column = styled.div`
-    margin: 10px;
+    @media (max-width: 800px) {
+        margin: 10px;
+    }
 `;
 
 // TODO: 
