@@ -15,8 +15,19 @@ import logo4 from "../../resources/gemesis_metalicGold.png";
 const Styles = styled.div`
 
   .navbar-collapse {
-    text-align: center;
+    text-align: right;
     justify-content: flex-end;
+
+    @media (max-width: 991.98px) {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 150px;
+      padding-right: 20px;
+      background-color: rgba(67,67,67,0.8);
+      text-align: center; 
+      border-radius: 0px 0px 0px 20px;     
+    }
   }
 
   .navbar-brand {

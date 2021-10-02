@@ -13,9 +13,6 @@ const TeamContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    @media (max-width: 800px) {
-        flex-direction: column;
-      }
 `;
 
 export const Column = styled.div`
@@ -24,8 +21,6 @@ export const Column = styled.div`
         alignt-content: center;
     }
 `;
-
-// TODO: 
 
 const Team = () => {
     useEffect(() => {
