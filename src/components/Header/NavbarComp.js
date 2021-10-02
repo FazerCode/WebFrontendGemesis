@@ -5,8 +5,10 @@ import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import Scrollspy from 'react-scrollspy';
-// import logo from "../../resources/gemesis_logo.png"
-import logo from "../../resources/gemesis_logo.png";
+import logo from "../../resources/gemesis_logo_gold.png";
+import logo2 from "../../resources/gemesis_logo_purple.png";
+import logo3 from "../../resources/gemesis_schrift.png";
+import logo4 from "../../resources/gemesis_metalicGold.png";
 
 // https://codesandbox.io/s/o4ws2
 
@@ -18,11 +20,7 @@ const Styles = styled.div`
   }
 
   .navbar-brand {
-    color: yellow;
-    &:hover {
-      color: red;
-    }
-    margin-left: 25px;
+    padding: 7px 14px 0px 20px;
   } 
 
   @media (max-width: 991.98px) {
@@ -41,18 +39,20 @@ const Styles = styled.div`
 
   a, .navbar-nav .nav-link {
     color: white;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 20px;
     font-weight: bold;
     -webkit-text-stroke: 0.5px black;
     padding: 10px;
     &:hover {
-      color: yellow;
+      color: #F0AF23;
     }
     text-decoration: none;
   }
 
   .is-current {
     a{
-        color: red;
+        color: #F0AF23;
         &::after {
             width: 100%;
         }
@@ -63,6 +63,7 @@ const Styles = styled.div`
     position: fixed;
     background-color: black;
     padding: 18px;
+    height: 80px;
     top: 0;
     right: 0;
     left: 0;
@@ -70,19 +71,20 @@ const Styles = styled.div`
     box-shadow: 0px 2px 5px #303030;
   }
 
-  .navbar-brand {
-    padding: 7px 14px;
-    position: relative;
-    z-index: 1;
+  .navbar-toggler {
+    border-color: #F0AF23;
+    justify-content: flex-end;
+    position: absolute;
+    top: 30%;
+    right: 5%;
   }
 
-  // .bg-dark {
-  //   position: fixed;
-  //   background-color: black;
-  // }
-
-  .navbar-toggler {
-    border-color: rgb(248, 186, 2);
+  .logo {
+    float: none;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   
 `;
@@ -90,24 +92,21 @@ const Styles = styled.div`
 const NavbarComp = () => {
   const [expanded, setExpanded] = useState(false);
 
-  // window.addEventListener("scroll", function () {
-  //   var value = window.scrollY;
-  //   if (value > 100) {
-  //     document.querySelector(".navbar").classList.add("bg-dark");
-  //   } else {
-  //     document.querySelector(".navbar").classList.remove("bg-dark");
-  //   }
-  // });
-
   return (
     <Styles>
-      <h1>Test</h1>
       <Navbar expand="lg" expanded={expanded}>
-        <Navbar.Brand >
+        <Navbar.Brand className="d-none d-lg-block">
           <a href="/">
-            <img width="70px" height="auto" className="img-responsive" src={logo} alt="logo" />
+            <img width="150px" height="auto" className="img-responsive hidden-xs" src={logo3} alt="logo" />
           </a>
         </Navbar.Brand>
+  
+        <Navbar.Brand className="logo">
+          <a href="/">
+            <img width="140px" height="auto" src={logo4} alt="logo" />
+          </a>
+        </Navbar.Brand>
+        
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
           {expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
         </Navbar.Toggle>
