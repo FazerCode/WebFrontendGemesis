@@ -1,6 +1,7 @@
 import { React, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ImageSlider from "./ImageSlider";
 
 const About = () => {
     useEffect(() => {
@@ -27,6 +28,8 @@ const About = () => {
                 <h4>Diamond, Emerald, Saphir - we are here</h4>
 
             </div>
+
+            <ImageSlider />
         </div>
 
     )

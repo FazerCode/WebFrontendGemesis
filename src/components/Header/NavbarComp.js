@@ -28,7 +28,11 @@ const Styles = styled.div`
       padding-right: 20px;
       background-color: rgba(67,67,67,0.8);
       text-align: center; 
-      border-radius: 0px 0px 0px 20px;     
+      border-radius: 0px 0px 0px 20px;
+      border-bottom: inset;
+      border-left: inset;
+      border-color: #B955C3;   
+      border-width: 1px; 
     }
   }
 
@@ -85,7 +89,7 @@ const Styles = styled.div`
   }
 
   .navbar-toggler {
-    border-color: #F0AF23;
+    border-color: #B955C3;
     justify-content: flex-end;
     position: absolute;
     top: 30%;
