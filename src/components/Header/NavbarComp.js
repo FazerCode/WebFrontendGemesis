@@ -9,6 +9,8 @@ import logo from "../../resources/gemesis_logo_gold.png";
 import logo2 from "../../resources/gemesis_logo_purple.png";
 import logo3 from "../../resources/gemesis_schrift.png";
 import logo4 from "../../resources/gemesis_metalicGold.png";
+import purpleLogoText from "../../resources/gemesis_logo_purple_text.png"
+import purpleLogo from "../../resources/gemesis_logo_purple_black.png"
 
 // https://codesandbox.io/s/o4ws2
 
@@ -56,14 +58,14 @@ const Styles = styled.div`
     -webkit-text-stroke: 0.5px black;
     padding: 10px;
     &:hover {
-      color: #F0AF23;
+      color: #B955C3;
     }
     text-decoration: none;
   }
 
   .is-current {
     a{
-        color: #F0AF23;
+        color: #B955C3;
         &::after {
             width: 100%;
         }
@@ -106,7 +108,7 @@ const NavbarComp = () => {
   return (
     <Styles>
       <Navbar expand="lg" expanded={expanded}>
-        <Navbar.Brand className="d-none d-lg-block">
+        {/* <Navbar.Brand className="d-none d-lg-block">
           <a href="/">
             <img width="150px" height="auto" className="img-responsive hidden-xs" src={logo3} alt="logo" />
           </a>
@@ -114,7 +116,19 @@ const NavbarComp = () => {
   
         <Navbar.Brand className="logo">
           <a href="/">
-            <img width="140px" height="auto" src={logo4} alt="logo" />
+            <img width="140px" height="auto" src={logo2} alt="logo" />
+          </a>
+        </Navbar.Brand> */}
+
+        <Navbar.Brand className="d-none d-lg-block">
+          <a href="/">
+            <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
+          </a>
+        </Navbar.Brand>
+  
+        <Navbar.Brand className="logo">
+          <a href="/">
+            <img width="140px" height="auto" src={purpleLogo} alt="logo" />
           </a>
         </Navbar.Brand>
         
