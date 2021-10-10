@@ -6,15 +6,21 @@ import {
   Column,
   FooterLink,
   Heading,
+  Image
 } from "./FooterStyles";
-import { FaDiscord, FaTwitter } from 'react-icons/fa'
+import { FaDiscord, FaTwitter } from 'react-icons/fa';
+import logo from "../../resources/gemesis_logo_purple.png";
   
 const Footer = () => {
   return (
     <Box>
       <Container>
         <Row>
-          <Column>
+        <Column>
+            <Image class="logo" width="120px" height="auto" src={logo} alt="logo" />
+            <p>©2021 GEMESIS. All rights reserved.</p>
+          </Column>
+        <Column>
             <Heading>Menu</Heading>
             <FooterLink href="#">Home</FooterLink>
             <FooterLink href="#minter">Minting</FooterLink>
@@ -34,6 +40,10 @@ const Footer = () => {
                     <FaDiscord />
                 </span>
             </FooterLink>
+          </Column>
+          <Column>
+            <Heading>Terms & Conditions</Heading>
+            <FooterLink href="/terms">Terms</FooterLink>
           </Column>
         </Row>
       </Container>

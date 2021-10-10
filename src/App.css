@@ -14,17 +14,38 @@
     position: relative;
     width: 100%;
     height: auto;
+    background-color: black;
+   
+  }
+
+  .background {
     /* background */
     /* overflow-y: hidden ! important;
     overflow-x: hidden ! important; */
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 0px;
-    background-color: black;
     background-image: url('./resources/background.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
+  }
+
+  .background2 {
+    /* background */
+    /* overflow-y: hidden ! important;
+    overflow-x: hidden ! important; */
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-image: url('./resources/background2.jpg');
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
   }
   
   .App-logo {

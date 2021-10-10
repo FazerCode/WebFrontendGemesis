@@ -83,7 +83,7 @@ const Styles = styled.div`
     height: 80px;
     top: 0;
     right: 0;
-    left: 0;
+    left: 0; 
     z-index: 1030;
     box-shadow: 0px 2px 5px #303030;
   }

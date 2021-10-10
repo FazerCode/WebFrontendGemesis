@@ -5,7 +5,7 @@ export const Box = styled.div`
   background: #333232;
   width: 100%;
   margin-top: 170px;
-  padding: 80px 60px;
+  padding-top: 80px;
   
   @media (max-width: 1000px) {
     padding: 70px 30px;
@@ -14,28 +14,31 @@ export const Box = styled.div`
 `;
    
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1000px;
-    margin: 0 auto;
+  
 `
    
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 50px;
+  }
 `;
    
 export const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 
-                         minmax(185px, 1fr));
-  grid-gap: 20px;
-   
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, 
-                           minmax(200px, 1fr));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 `;
    
@@ -56,4 +59,9 @@ export const Heading = styled.p`
   color: #fff;
   margin-bottom: 40px;
   font-weight: bold;
+`;
+
+export const Image = styled.img`
+  margin-left: 80px;
+  margin-bottom: 80px;
 `;

@@ -9,8 +9,8 @@ const Roadmap = () => {
       });
 
     return (
-        <div className="container roadmap" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-            <div className="roadmap-info" id="roadmap">
+        <div className="roadmap background2" >
+            <div className="roadmap-info container" id="roadmap" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <h1>Treasure Map</h1>
                 <h1>Treasure Map</h1>
                 <h1>Treasure Map</h1>

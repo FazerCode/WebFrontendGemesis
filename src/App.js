@@ -9,6 +9,7 @@ import About from './components/Content/About';
 import Roadmap from './components/Content/Roadmap';
 import Team from './components/Content/Team/Team';
 import Footer from './components/Footer/Footer';
+import Terms from './components/Terms/Terms';
 
 // DATA AOS for animated components on scrolling
 
@@ -19,14 +20,16 @@ const App = () => {
       <Router>
         <NavbarComp />
         <Switch>
+          <Route path="/terms">
+            <Terms />
+          </Route>
           <Route path="/">
             <div class="content">
               <Home />
               <About />
               <Minter />
               <Roadmap />
-              <Team />   
-
+              <Team />
             </div>
           </Route>
         </Switch>
