@@ -20,14 +20,7 @@ const Footer = () => {
             <Image class="logo" width="120px" height="auto" src={logo} alt="logo" />
             <p>©2021 GEMESIS. All rights reserved.</p>
           </Column>
-        <Column>
-            <Heading>Menu</Heading>
-            <FooterLink href="#">Home</FooterLink>
-            <FooterLink href="#minter">Minting</FooterLink>
-            <FooterLink href="#about">About</FooterLink>
-            <FooterLink href="#roadmap">Roadmap</FooterLink>
-            <FooterLink href="#team">Team</FooterLink>
-          </Column>
+       
           <Column>
             <Heading>Social Media</Heading>
             <FooterLink href="https://twitter.com/gemesis_" target="_blank" rel="noopener noreferrer">

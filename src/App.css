@@ -9,8 +9,8 @@
   }
 
   body {
+    margin: 0px;
     color: white;
-    margin-bottom: 100px;
     position: relative;
     width: 100%;
     height: auto;

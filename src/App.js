@@ -18,23 +18,25 @@ const App = () => {
   return (
     <div >
       <Router>
-        <NavbarComp />
         <Switch>
           <Route path="/terms">
             <Terms />
           </Route>
           <Route path="/">
             <div class="content">
+              <NavbarComp />
+
               <Home />
               <About />
               <Minter />
               <Roadmap />
               <Team />
+
+             <Footer />
             </div>
           </Route>
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }

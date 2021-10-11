@@ -4,8 +4,10 @@ export const Box = styled.div`
  
   background: #333232;
   width: 100%;
-  margin-top: 170px;
-  padding-top: 80px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 0px;
   
   @media (max-width: 1000px) {
     padding: 70px 30px;
@@ -62,6 +64,6 @@ export const Heading = styled.p`
 `;
 
 export const Image = styled.img`
-  margin-left: 80px;
+  margin-left: 65px;
   margin-bottom: 80px;
 `;

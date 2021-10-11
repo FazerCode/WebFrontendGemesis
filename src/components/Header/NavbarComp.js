@@ -112,18 +112,6 @@ const NavbarComp = () => {
   return (
     <Styles>
       <Navbar expand="lg" expanded={expanded}>
-        {/* <Navbar.Brand className="d-none d-lg-block">
-          <a href="/">
-            <img width="150px" height="auto" className="img-responsive hidden-xs" src={logo3} alt="logo" />
-          </a>
-        </Navbar.Brand>
-  
-        <Navbar.Brand className="logo">
-          <a href="/">
-            <img width="140px" height="auto" src={logo2} alt="logo" />
-          </a>
-        </Navbar.Brand> */}
-
         <Navbar.Brand className="d-none d-lg-block">
           <a href="/">
             <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
