@@ -7,6 +7,7 @@ import stone1 from "../../resources/stones/stone1.jpg"
 import stone2 from "../../resources/stones/stone2.jpg"
 import stone3 from "../../resources/stones/stone3.jpg"
 import stone4 from "../../resources/stones/stone4.jpg"
+import saphir from "../../resources/stones/saphir.jpg"
 
 const ImageSlider = () => {
     const [size, setSize] = useState([0, 0]);
@@ -22,7 +23,6 @@ const ImageSlider = () => {
       }, []);
 
     useEffect(() => {
-        console.log("size changed");
         // eslint-disable-next-line react-hooks/exhaustive-deps
         mediaQuery = window.matchMedia('(max-width: 991.98px)');
     }, [size])
@@ -87,7 +87,7 @@ const ImageSlider = () => {
                             <img style={imgStyle} src={stone1} alt="stone1"></img>
                         </div>
                         <div style={style}>
-                            <img style={imgStyle} src={stone2} alt="stone2"></img>
+                            <img style={imgStyle} src={saphir} alt="saphir"></img>
                         </div>
                         <div style={style}>
                             <img style={imgStyle} src={stone3} alt="stone3"></img>

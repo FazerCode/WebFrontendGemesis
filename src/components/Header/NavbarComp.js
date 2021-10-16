@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import { NavHashLink as Link } from 'react-router-hash-link';
-import { Link, scroll, scrollSpy } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { Navbar, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
