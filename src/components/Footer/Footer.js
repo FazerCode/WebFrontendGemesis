@@ -10,6 +10,8 @@ import {
 } from "./FooterStyles";
 import { FaDiscord, FaTwitter } from 'react-icons/fa';
 import logo from "../../resources/gemesis_logo_purple.png";
+import { NavLink } from "react-router-dom";
+
   
 const Footer = () => {
   return (
@@ -17,7 +19,7 @@ const Footer = () => {
       <Container>
         <Row>
         <Column>
-            <Image class="logo" width="120px" height="auto" src={logo} alt="logo" />
+            <Image className="logo" width="120px" height="auto" src={logo} alt="logo" />
             <p>©2021 GEMESIS. All rights reserved.</p>
           </Column>
        
@@ -28,7 +30,7 @@ const Footer = () => {
                     <FaTwitter />
                 </span>
             </FooterLink>
-            <FooterLink href="https://discord.gg/e58sqmsn" target="_blank" rel="noopener noreferrer">
+            <FooterLink href="https://discord.gg/aS5X7ZWc6C" target="_blank" rel="noopener noreferrer">
                 <span>
                     <FaDiscord />
                 </span>
@@ -36,7 +38,7 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Terms & Conditions</Heading>
-            <FooterLink href="/terms">Terms</FooterLink>
+            <a className="footerLink" href="/terms">Terms</a>
           </Column>
         </Row>
       </Container>

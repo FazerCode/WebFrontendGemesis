@@ -1,13 +1,16 @@
 import React from 'react';
+import { motion } from "framer-motion"
+import { Element } from 'react-scroll';
+
 const Home = () => {
 
     return (
-        <div className="container home background" >
-            <div>
-                <div className="container" id="home" style={{ marginTop: 150,  color: 'white'}}>
+        <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1}} id="home">
+                <div className="container home background" >
+                    <div className="container" style={{ marginTop: 150, color: 'white' }}>
+                    </div>
                 </div>
-            </div>
-        </div>
+        </motion.div>
     );
 }
 

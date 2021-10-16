@@ -1,43 +1,38 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import React from 'react';
-import NavbarComp from './components/Header/NavbarComp';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/Content/Home';
-import Minter from './components/Content/Minter'
-import About from './components/Content/About';
-import Roadmap from './components/Content/Roadmap';
-import Team from './components/Content/Team/Team';
-import Footer from './components/Footer/Footer';
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence } from "framer-motion";
+import { Route, Switch } from 'react-router';
 import Terms from './components/Terms/Terms';
+import Gemesis from './components/Content/Gemesis';
 
 // DATA AOS for animated components on scrolling
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000);
+  }, []);
 
   return (
-    <div >
-      <Router>
-        <Switch>
-          <Route path="/terms">
-            <Terms />
-          </Route>
-          <Route path="/">
-            <div class="content">
-              <NavbarComp />
+    <>
+      {/* {loading === false ? ( */}
 
-              <Home />
-              <About />
-              <Minter />
-              <Roadmap />
-              <Team />
+        <AnimatePresence exitBeforeEnter>
+          <Switch>
+            <Route exact path="/" component={Gemesis} />
+            <Route exact path="/terms" render={() => {
+              return <Terms />           
+            }}>
+            </Route>
+          </Switch>
+        </AnimatePresence>
 
-             <Footer />
-            </div>
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+      {/* ) : (
+        <LoadingScreen />
+      )} */}
+    </>
   );
 }
 

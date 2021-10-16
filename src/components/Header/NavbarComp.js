@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { NavHashLink as Link } from 'react-router-hash-link';
+// import { NavHashLink as Link } from 'react-router-hash-link';
+import { Link, scroll, scrollSpy } from 'react-scroll';
 import { Navbar, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
@@ -54,17 +55,18 @@ const Styles = styled.div`
 
   }
 
-  a, .navbar-nav .nav-link {
+  a {
     color: white;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 20px;
     font-weight: bold;
     -webkit-text-stroke: 0.5px black;
     padding: 10px;
+    text-decoration: none;
     &:hover {
+      cursor: pointer;
       color: #B955C3;
     }
-    text-decoration: none;
   }
 
   .is-current {
@@ -117,13 +119,13 @@ const NavbarComp = () => {
             <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
           </a>
         </Navbar.Brand>
-  
+
         <Navbar.Brand className="logo">
           <a href="/">
             <img width="140px" height="auto" src={purpleLogo} alt="logo" />
           </a>
         </Navbar.Brand>
-        
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
           {expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
         </Navbar.Toggle>
@@ -131,27 +133,37 @@ const NavbarComp = () => {
           <Nav>
             <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">
               <Nav.Item>
-                <Link to="/" onClick={() => { window.scrollTo(0, 0); setExpanded(false) }}>
+                <Link activeClass="active" className="home" to="home" smooth={true}
+                  duration={2000}
+                  delay={100} onClick={() => { setExpanded(false) }}>
                   Home
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="#about" onClick={() => setExpanded(false)}>
+                <Link activeClass="active" className="about" to="about" spy={true} hashSpy={true} smooth={true}     
+                  duration={2000}
+                  delay={100} saveHashHistory={false} onClick={() => setExpanded(false)}>
                   About
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="#minter" onClick={() => setExpanded(false)}>
+                <Link activeClass="active" className="minter" to="minter" spy={true} hashSpy={true} smooth={true}
+                  duration={2000}
+                  delay={100} saveHashHistory={false} onClick={() => setExpanded(false)}>
                   Minting
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="#roadmap" onClick={() => setExpanded(false)}>
+                <Link activeClass="active" className="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
+                  duration={2000}
+                  delay={100} saveHashHistory={false} onClick={() => setExpanded(false)}>
                   Roadmap
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="#team" onClick={() => setExpanded(false)}>
+                <Link activeClass="active" className="team" to="team" spy={true} hashSpy={true} smooth={true}
+                  duration={2000}
+                  delay={100} saveHashHistory={false}>
                   Team
                 </Link>
               </Nav.Item>
@@ -161,7 +173,7 @@ const NavbarComp = () => {
                 </a>
               </Nav.Item>
               <Nav.Item>
-                <a href="https://discord.gg/e58sqmsn" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
+                <a href="https://discord.gg/aS5X7ZWc6C" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
                   <FaDiscord />
                 </a>
               </Nav.Item>

@@ -6,6 +6,7 @@
 
   html, body, #app, #app>div {
     height: 100%;
+    background-color: black;
   }
 
   body {
@@ -176,5 +177,25 @@
     margin-top: 40px;
     background-color: #254cdd;
     color:white;
+  }
+
+  .footerLink {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .footerLink:hover {
+    color: #B955C3;
+    transition: 200ms ease-in;
+  }
+
+  .backLink {
+    color: #B955C3;
+    display: inline-block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
   }
 
