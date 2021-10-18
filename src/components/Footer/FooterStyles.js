@@ -68,3 +68,12 @@ export const Image = styled.img`
   margin-left: 65px;
   margin-bottom: 80px;
 `;
+
+export const Logo = styled.img`
+  margin-bottom: 0px;
+
+  &:hover {
+    color: #B955C3;
+    transition: 200ms ease-in;
+  }
+`;
