@@ -3,7 +3,6 @@ import styled from "styled-components";
 const CardContainer = styled.div`
     background-color: black;
     resizeMode: 'cover';
-    box-shadow: 5px 10px 8px 0 rgba(0,0,0,0.7);
     height: 420px;
     width: 290px;
     display: table-cell;
@@ -23,7 +22,8 @@ const Image = styled.img`
     max-width: 90%;
     max-height: 100%;    
     border-radius: 40px;
-    box-shadow: 5px 10px 8px 0 rgba(255,255,255,0.3);
+    color: #B955C3;
+    box-shadow: 5px 5px 8px 0 #B955C3;
 
 `
 
