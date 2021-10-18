@@ -35,7 +35,7 @@
   .background2 {
     position: relative;
     left: 0px;
-    background-image: url('./resources/background2.jpg');
+    background-image: url('./resources/background4.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -195,7 +195,7 @@
     color: #B955C3;
     display: inline-block;
     position: absolute;
-    top: 5%;
+    top: 60px;
     left: 5%;
   }
 

@@ -5,10 +5,21 @@ import { AnimatePresence } from "framer-motion";
 import { Route, Switch } from 'react-router';
 import Terms from './components/Terms/Terms';
 import Gemesis from './components/Content/Gemesis';
+import ReactGA from 'react-ga';
 
 // DATA AOS for animated components on scrolling
 
 const App = () => {
+
+  useEffect(() => {
+    ReactGA.initialize('UA-210380908-1');
+    
+    // report page view
+    ReactGA.pageview('/');
+
+  }, []);
+
+  
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
