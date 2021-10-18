@@ -181,7 +181,7 @@ const NavbarComp = () => {
               </Nav.Item>
               <Nav.Item>
                 <a href="https://testnets.opensea.io/collection/gemesis" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
-                  <img className="logo" width="25px" src={openseaLogo} 
+                  <img width="23px" height="auto" src={openseaLogo} 
                     onMouseOver={e => e.currentTarget.src = openseaLogoHover}
                     onMouseOut={e => e.currentTarget.src = openseaLogo}
                     alt="openseaLogo" />
