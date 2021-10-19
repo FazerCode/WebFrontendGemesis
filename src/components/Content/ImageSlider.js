@@ -15,12 +15,12 @@ const ImageSlider = () => {
 
     useLayoutEffect(() => {
         function updateSize() {
-          setSize([window.innerWidth, window.innerHeight]);
+            setSize([window.innerWidth, window.innerHeight]);
         }
         window.addEventListener('resize', updateSize);
         updateSize();
         return () => window.removeEventListener('resize', updateSize);
-      }, []);
+    }, []);
 
     useEffect(() => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -28,14 +28,21 @@ const ImageSlider = () => {
     }, [size])
 
     const style = {
-        margin: '40px',
+        margin: '80px',
         height: '550',
-        widht: 'auto',
     };
 
     const imgStyle = {
         width: '100%',
         height: '100%',
+        objectFit: 'cover',
+        boxShadow: 'rgba(185, 85, 195, 0.8) 0px 0px 20px 0px',
+        borderRadius: '15px'
+    };
+
+    const imgStyleBig = {
+        width: '60vH',
+        height: '60vH',
         objectFit: 'cover',
         boxShadow: 'rgba(185, 85, 195, 0.8) 0px 0px 20px 0px',
         borderRadius: '15px'
@@ -65,39 +72,37 @@ const ImageSlider = () => {
 
     return (
         <div>
-            <div>
-                {mediaQuery.matches ?
-                    <Slide {...propertiesSmallSize}>
-                        <div style={style}>
-                            <img style={imgStyle} src={stone1} alt="stone1"></img>
-                        </div>
-                        <div style={style}>
-                            <img style={imgStyle} src={stone2} alt="stone2"></img>
-                        </div>
-                        <div style={style}>
-                            <img style={imgStyle} src={stone3} alt="stone3"></img>
-                        </div>
-                        <div style={style}>
-                            <img style={imgStyle} src={stone4} alt="stone4"></img>
-                        </div>
-                    </Slide>
-                    :
-                    <Slide {...propertiesBigSize}>
-                        <div style={style}>
-                            <img style={imgStyle} src={stone1} alt="stone1"></img>
-                        </div>
-                        <div style={style}>
-                            <img style={imgStyle} src={saphir} alt="saphir"></img>
-                        </div>
-                        <div style={style}>
-                            <img style={imgStyle} src={stone3} alt="stone3"></img>
-                        </div>
-                        <div style={style}>
-                            <img style={imgStyle} src={stone4} alt="stone4"></img>
-                        </div>
-                    </Slide>
-                }
-            </div>
+            {mediaQuery.matches ?
+                <Slide {...propertiesSmallSize} >
+                    <div style={style}>
+                        <img style={imgStyle} src={stone1} alt="stone1"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyle} src={stone2} alt="stone2"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyle} src={stone3} alt="stone3"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyle} src={stone4} alt="stone4"></img>
+                    </div>
+                </Slide>
+                :
+                <Slide {...propertiesBigSize}>
+                    <div style={style}>
+                        <img style={imgStyleBig} src={stone1} alt="stone1"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyleBig} src={saphir} alt="saphir"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyleBig} src={stone3} alt="stone3"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyleBig} src={stone4} alt="stone4"></img>
+                    </div>
+                </Slide>
+            }
         </div>
     );
 };
