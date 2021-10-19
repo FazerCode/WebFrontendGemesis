@@ -51,7 +51,7 @@ const Minter = () => {
           "..." +
           String(walletAddress).substring(38)
         ) : (
-          <span>🦊 Connect Wallet</span>
+          <span>Connect Wallet</span>
         )}
       </button>
 
