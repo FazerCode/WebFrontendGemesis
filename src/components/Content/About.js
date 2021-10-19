@@ -25,7 +25,7 @@ const About = () => {
             <div data-aos="fade-right" data-aos-id="super-duper" data-aos-offset="300" data-aos-easing="ease-in-sine" className="about-info" id="about">
                 <h1>About</h1>
                 {isVisible ?
-                <Typist className="TypistStyle" cursor={{ show: false }}>
+                <Typist className="TypistStyle" cursor={{ show: false}} stdTypingDelay="0.5" avgTypingDelay="12">
                 <div>
                     <p> Year 2221. Moon Enceladus. Saturn. </p>
                     <p> Resources are scarce, and the greatest source of energy lies in the power of the Gemesis Stones. </p>

@@ -38,12 +38,12 @@ const Minter = () => {
   };
 
   const onMintPressed = async () => { 
-    const { status } = await mintNFT(url, name, description);
-    setStatus(status);
+    // const { status } = await mintNFT(url, name, description);
+    // setStatus(status);
   };
 
   return (
-    <div className="Minter" id="minter" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <div className="Minter container" id="minter" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
       <button id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
           "Connected: " +
@@ -56,11 +56,11 @@ const Minter = () => {
       </button>
 
       <br></br>
-      <h1 id="title">🧙‍♂️ Gemesis NFT Minter</h1>
-      <button id="mintButton" onClick={onMintPressed}>
-        Mint NFT
+      <h1 id="title">🧙‍♂️ Minting soon on Ethereum 🧙‍♂️</h1>
+      <button class="glow-on-hover" id="mintButton" onClick={onMintPressed}>
+        MINT (Coming soon...)
       </button>
-      <p id="status">
+      <p id="status" style={{marginTop: '25px'}}>
         {status}
       </p>
     </div>
@@ -76,7 +76,7 @@ const Minter = () => {
           setStatus("👆🏽 Mint a new NFT here");
         } else {
           setWallet("");
-          setStatus("🦊 Connect to Metamask using the top right button.");
+          setStatus("🦊 Connect to Metamask using connect button.");
         }
       });
     } else {
