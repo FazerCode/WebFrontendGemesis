@@ -13,9 +13,6 @@ const Minter = () => {
   //State variables
   const [walletAddress, setWallet] = useState("");    //users wallet address
   const [status, setStatus] = useState("");  //User replies with string written to contract
-  const [name] = useState("");
-  const [description] = useState("");
-  const [url] = useState("");
 
   useEffect(() => {
     AOS.init();

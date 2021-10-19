@@ -111,7 +111,7 @@ const NavbarComp = () => {
 
   return (
     <Styles>
-      <Navbar expand="lg" expanded={expanded}>
+      <Navbar expand="xl" expanded={expanded}>
         <Navbar.Brand className="d-none d-lg-block">
           <a href="/">
             <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
