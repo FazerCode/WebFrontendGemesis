@@ -1,0 +1,256 @@
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+  
+  .App {
+    text-align: center;
+  }
+
+  html, body, #app, #app>div {
+    height: 100%;
+    background-color: black;
+  }
+
+  body {
+    margin: 0px;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: black;
+  }
+
+  .background {
+    /* background */
+    /* overflow-y: hidden ! important;
+    overflow-x: hidden ! important; */
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-image: url('./resources/background_city_blue.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .background2 {
+    position: relative;
+    left: 0px;
+    background-image: url('./resources/background5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  h1 {
+    margin-left: 25px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .home, .roadmap, .Minter{
+    height: 100vh;
+  }
+
+  .about-info {
+    height: 100vh;
+    padding-top: 180px;
+  }
+
+  .roadmap-info, .minter{
+    padding-top: 140px;
+  }
+
+  .team {
+    height: 100vh;
+    padding-top: 140px;
+    margin-bottom: 200px;
+  }
+  
+  .Minter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 80px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 100%;
+  
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    font-size: 16px;
+    width: 100%;
+    border-color: rgba(4, 4, 5, 0.1);
+    line-height: 32px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: rgba(4, 4, 5, 0.4);
+  }
+  
+  button:hover {
+    margin-top: -1px;
+  }
+  
+  #title {
+    padding-top: 32px;
+  }
+  
+  .uploadFile {
+    border: 4px dashed rgba(4, 4, 5, 0.1);
+    border-radius: 16px;
+    text-align: center;
+    padding: 32px 60px;
+  }
+  
+  #walletButton {
+
+    float: right;
+    background-color: #B955C3;
+    color: #000;
+    margin-top: 120px;
+    line-height: 16px;
+  }
+  
+  #walletButton:focus {
+    outline:none;
+    border: none;
+  }
+  
+  #walletButton:hover {
+    outline:none;
+    border :none;
+  }
+  
+  #mintButton {
+    margin-top: 40px;
+    line-height: 16px;
+  }
+
+  .footerLink {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .footerLink:hover {
+    color: #B955C3;
+    transition: 200ms ease-in;
+  }
+
+  .backLink {
+    color: #B955C3;
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+    left: 5%;
+  }
+
+  /* Typist */
+  .TypistStyle {
+    font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: large;
+  }
+
+
+  .glow-on-hover {
+    font-size: large;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.623);
+    width: 220px;
+    height: 50px;
+    border-color: white;
+    border-width: 1px;
+    outline: none;
+    background: rgb(90, 3, 148);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(90, 3, 148);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
