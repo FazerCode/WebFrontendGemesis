@@ -2,7 +2,6 @@ import { React, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Card from "./Card";
-import { Element } from 'react-scroll';
 import styled from "styled-components";
 import logo from "../../../resources/babyFalco.png"
 import logo2 from "../../../resources/babyFalco2.png"

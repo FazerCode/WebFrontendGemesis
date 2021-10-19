@@ -8,10 +8,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import Scrollspy from 'react-scrollspy';
 import openseaLogo from "../../resources/openseaLogo.png";
 import openseaLogoHover from "../../resources/openseaLogoHover.png";
-import logo from "../../resources/gemesis_logo_gold.png";
-import logo2 from "../../resources/gemesis_logo_purple.png";
-import logo3 from "../../resources/gemesis_schrift.png";
-import logo4 from "../../resources/gemesis_metalicGold.png";
 import purpleLogoText from "../../resources/gemesis_logo_purple_text.png"
 import purpleLogo from "../../resources/gemesis_logo_purple_black.png"
 

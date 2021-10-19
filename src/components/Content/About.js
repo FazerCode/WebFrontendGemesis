@@ -1,63 +1,42 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ImageSlider from "./ImageSlider";
-import TypeWriterEffect from 'react-typewriter-effect';
+import Typist from 'react-typist';
 
 const About = () => {
+    const [isVisible, setVisible] = useState(false);
+
     useEffect(() => {
+        document.addEventListener('aos:in', () => {
+            setVisible(true);
+        });
+
+        document.addEventListener('aos:out', () => {
+            setVisible(false);
+        });
+
         AOS.init();
         AOS.refresh();
-    });
+    }, []);
 
     return (
         <div className="container">
-
-            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" className="about-info" id="about">
+            <div data-aos="fade-right" data-aos-id="super-duper" data-aos-offset="300" data-aos-easing="ease-in-sine" className="about-info" id="about">
                 <h1>About</h1>
-                <TypeWriterEffect
-                     textStyle={{
-                        fontFamily: 'Red Hat Display',
-                        color: '#3F3D56',
-                        fontWeight: 500,
-                        fontSize: '1.5em',
-                    }}
-                    startDelay={100}
-                    cursorColor="#3F3D56"
-                    text="We write the year 2221. Moon Enceladus - Saturn."
-                    typeSpeed={30}
-                    hideCursorAfterText="true"
-                />
-                <TypeWriterEffect
-                     textStyle={{
-                        fontFamily: 'Red Hat Display',
-                        color: '#3F3D56',
-                        fontWeight: 500,
-                        fontSize: '1.5em',
-                    }}
-                    startDelay={3000}
-                    cursorColor="#3F3D56"
-                    text="Resources are scarce, and the greatest source of energy lies in the power of the Gemesis Stones."
-                    typeSpeed={30}
-                    hideCursorAfterText="true"
-                />
-                <TypeWriterEffect
-                     textStyle={{
-                        fontFamily: 'Red Hat Display',
-                        color: '#3F3D56',
-                        fontWeight: 500,
-                        fontSize: '1.5em',
-                    }}
-                    startDelay={9000}
-                    cursorColor="#3F3D56"
-                    text="To be continued..."
-                    typeSpeed={30}
-                    hideCursorAfterText="true"
-                />
+                {isVisible ?
+                <Typist className="TypistStyle" cursor={{ show: false }}>
+                <div>
+                    <p> Year 2221. Moon Enceladus. Saturn. </p>
+                    <p> Resources are scarce, and the greatest source of energy lies in the power of the Gemesis Stones. </p>
+                    <p> A few brave explorers set out on a journey to mine the Gemesis Stones </p>
+                    <p> To be continued... </p>
+                </div>
+            </Typist> 
+            : <> </>}
             </div>
             <ImageSlider />
         </div>
-
     )
 }
 

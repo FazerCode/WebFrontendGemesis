@@ -13,9 +13,6 @@ import { FaDiscord, FaTwitter } from 'react-icons/fa';
 import logo from "../../resources/gemesis_logo_purple.png";
 import openseaLogo from "../../resources/openseaLogo.png";
 import openseaLogoHover from "../../resources/openseaLogoHover.png";
-import { NavLink } from "react-router-dom";
-import { span } from "prelude-ls";
-
   
 const Footer = () => {
   return (

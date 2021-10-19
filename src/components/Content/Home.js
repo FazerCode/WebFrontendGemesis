@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import { Element } from 'react-scroll';
 
 const Home = () => {
 

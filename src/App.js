@@ -6,6 +6,7 @@ import { Route, Switch } from 'react-router';
 import Terms from './components/Terms/Terms';
 import Gemesis from './components/Content/Gemesis';
 import ReactGA from 'react-ga';
+import 'babel-polyfill'
 
 // DATA AOS for animated components on scrolling
 
@@ -13,13 +14,14 @@ const App = () => {
 
   useEffect(() => {
     ReactGA.initialize('UA-210380908-1');
-    
+
     // report page view
     ReactGA.pageview('/');
 
+    
   }, []);
 
-  
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -30,15 +32,15 @@ const App = () => {
     <>
       {/* {loading === false ? ( */}
 
-        <AnimatePresence exitBeforeEnter>
-          <Switch>
-            <Route exact path="/" component={Gemesis} />
-            <Route exact path="/terms" render={() => {
-              return <Terms />           
-            }}>
-            </Route>
-          </Switch>
-        </AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
+        <Switch>
+          <Route exact path="/" component={Gemesis} />
+          <Route exact path="/terms" render={() => {
+            return <Terms />
+          }}>
+          </Route>
+        </Switch>
+      </AnimatePresence>
 
       {/* ) : (
         <LoadingScreen />
