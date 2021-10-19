@@ -131,37 +131,37 @@ const NavbarComp = () => {
           <Nav>
             <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">
               <Nav.Item>
-                <Link activeClass="active" className="home" to="home" smooth={true}
-                  duration={2000}
-                  delay={100} onClick={() => { setExpanded(false) }}>
+                <Link activeClass="active" className="home" href="home" to="home" smooth={true}
+                  duration={1000}
+                  delay={10} onClick={() => { setExpanded(false) }}>
                   Home
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link activeClass="active" className="about" to="about" spy={true} hashSpy={true} smooth={true}     
-                  duration={2000}
-                  delay={100} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                <Link activeClass="active" className="about" href="about" to="about" spy={true} hashSpy={true} smooth={true}     
+                  duration={1000}
+                  delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
                   About
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link activeClass="active" className="minter" to="minter" spy={true} hashSpy={true} smooth={true}
-                  duration={2000}
-                  delay={100} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                <Link activeClass="active" className="minter" href="minter" to="minter" spy={true} hashSpy={true} smooth={true}
+                  duration={1000}
+                  delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
                   Minting
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link activeClass="active" className="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
-                  duration={2000}
-                  delay={100} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                <Link activeClass="active" className="roadmap" href="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
+                  duration={1000}
+                  delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
                   Roadmap
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link activeClass="active" className="team" to="team" spy={true} hashSpy={true} smooth={true}
-                  duration={2000}
-                  delay={100} saveHashHistory={false}>
+                <Link activeClass="active" className="team" href="team" to="team" spy={true} hashSpy={true} smooth={true}
+                  duration={1000}
+                  delay={10} saveHashHistory={false}>
                   Team
                 </Link>
               </Nav.Item>
