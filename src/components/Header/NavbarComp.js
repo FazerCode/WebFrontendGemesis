@@ -59,7 +59,7 @@ const Styles = styled.div`
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 20px;
     font-weight: bold;
-    -webkit-text-stroke: 0.5px black;
+    -webkit-text-stroke: 0.2px white;
     padding: 10px;
     text-decoration: none;
     &:hover {
@@ -87,6 +87,11 @@ const Styles = styled.div`
     left: 0; 
     z-index: 1030;
     box-shadow: 0px 2px 5px #303030;
+  }
+
+  .navbarTransparent {
+    background-color: rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 0px;
   }
 
   .navbar-toggler {
@@ -126,7 +131,7 @@ const NavbarComp = () => {
 
   return (
     <Styles>
-      <Navbar expand="xl" expanded={expanded}>
+      <Navbar className={ !showLogo && 'navbarTransparent'} expand="xl" expanded={expanded}>
         <Navbar.Brand className="d-none d-xl-block">
           <a href="/">
             <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
