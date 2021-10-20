@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { NavHashLink as Link } from 'react-router-hash-link';
 import { Link } from 'react-scroll';
 import { AnimatePresence, motion } from "framer-motion"
@@ -110,31 +110,38 @@ const Styles = styled.div`
 const NavbarComp = () => {
   const [expanded, setExpanded] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
 
-  const handleShowLogo = () => {
-    console.log("handle");
-    setShowLogo(true);
-    console.log(showLogo);
+  const handleResize = () => {
+    if (window.innerWidth < 1200) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
   }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  })
 
   return (
     <Styles>
       <Navbar expand="xl" expanded={expanded}>
-        <Navbar.Brand className="d-none d-lg-block">
+        <Navbar.Brand className="d-none d-xl-block">
           <a href="/">
             <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
           </a>
         </Navbar.Brand>
 
         <AnimatePresence>
-        {showLogo &&
-        <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >
-        <Navbar.Brand className="logo">
-          <a href="/">
-            <img width="140px" height="auto" src={purpleLogo} alt="logo" />
-          </a>
-        </Navbar.Brand>
-        </motion.div>}
+          {(showLogo || isMobile) &&
+            <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >
+              <Navbar.Brand className="logo">
+                <a href="/">
+                  <img width="140px" height="auto" src={purpleLogo} alt="logo" />
+                </a>
+              </Navbar.Brand>
+            </motion.div>}
         </AnimatePresence>
 
 
@@ -152,7 +159,7 @@ const NavbarComp = () => {
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link activeClass="active" className="about" href="about" to="about" spy={true} hashSpy={true} smooth={true}     
+                <Link activeClass="active" className="about" href="about" to="about" spy={true} hashSpy={true} smooth={true}
                   duration={1000}
                   delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
                   About
@@ -191,7 +198,7 @@ const NavbarComp = () => {
               </Nav.Item>
               <Nav.Item>
                 <a href="https://testnets.opensea.io/collection/gemesis" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
-                  <img width="23px" height="auto" src={openseaLogo} 
+                  <img width="23px" height="auto" src={openseaLogo}
                     onMouseOver={e => e.currentTarget.src = openseaLogoHover}
                     onMouseOut={e => e.currentTarget.src = openseaLogo}
                     alt="openseaLogo" />
