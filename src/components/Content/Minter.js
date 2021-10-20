@@ -54,7 +54,7 @@ const Minter = () => {
 
       <br></br>
       <h1 id="title">🧙‍♂️ Minting soon on Ethereum 🧙‍♂️</h1>
-      <button class="glow-on-hover" id="mintButton" onClick={onMintPressed}>
+      <button className="glow-on-hover" id="mintButton" onClick={onMintPressed}>
         MINT (Coming soon...)
       </button>
       <p id="status" style={{marginTop: '25px'}}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import { NavHashLink as Link } from 'react-router-hash-link';
 import { Link } from 'react-scroll';
+import { AnimatePresence, motion } from "framer-motion"
 import { Navbar, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
@@ -108,6 +109,13 @@ const Styles = styled.div`
 
 const NavbarComp = () => {
   const [expanded, setExpanded] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
+
+  const handleShowLogo = () => {
+    console.log("handle");
+    setShowLogo(true);
+    console.log(showLogo);
+  }
 
   return (
     <Styles>
@@ -118,11 +126,17 @@ const NavbarComp = () => {
           </a>
         </Navbar.Brand>
 
+        <AnimatePresence>
+        {showLogo &&
+        <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >
         <Navbar.Brand className="logo">
           <a href="/">
             <img width="140px" height="auto" src={purpleLogo} alt="logo" />
           </a>
         </Navbar.Brand>
+        </motion.div>}
+        </AnimatePresence>
+
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
           {expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
@@ -131,9 +145,9 @@ const NavbarComp = () => {
           <Nav>
             <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">
               <Nav.Item>
-                <Link activeClass="active" className="home" href="home" to="home" smooth={true}
+                <Link activeClass="active" spy={true} className="home" href="home" to="home" smooth={true}
                   duration={1000}
-                  delay={10} onClick={() => { setExpanded(false) }}>
+                  delay={10} onClick={() => { setExpanded(false) }} onSetActive={() => setShowLogo(false)} onSetInactive={() => setShowLogo(true)}>
                   Home
                 </Link>
               </Nav.Item>
