@@ -109,6 +109,10 @@ const Styles = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .openseaLogo {
+    pointer-events: all;
+  }
   
 `;
 
@@ -203,7 +207,7 @@ const NavbarComp = () => {
               </Nav.Item>
               <Nav.Item>
                 <a href="https://testnets.opensea.io/collection/gemesis" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
-                  <img width="23px" height="auto" src={openseaLogo}
+                  <img className="openseaLogo" width="23px" height="auto" src={openseaLogo}
                     onMouseOver={e => e.currentTarget.src = openseaLogoHover}
                     onMouseOut={e => e.currentTarget.src = openseaLogo}
                     alt="openseaLogo" />
