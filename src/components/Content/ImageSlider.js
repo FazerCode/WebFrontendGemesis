@@ -49,8 +49,7 @@ const ImageSlider = () => {
         slidesToScroll: 2,
         autoplay: true,
         indicators: false,
-        arrows: false
-
+        arrows: false,
     };
 
     const propertiesSmallSize = {
@@ -61,7 +60,6 @@ const ImageSlider = () => {
         autoplay: true,
         indicators: false,
         arrows: false,
-
     };
 
     return (
