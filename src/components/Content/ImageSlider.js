@@ -3,11 +3,12 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css';
 // https://react-slideshow.herokuapp.com/api
-import stone1 from "../../resources/stones/stone1.jpg"
-import stone2 from "../../resources/stones/stone2.jpg"
-import stone3 from "../../resources/stones/stone3.jpg"
-import stone4 from "../../resources/stones/stone4.jpg"
-import saphir from "../../resources/stones/saphir.jpg"
+import stone1 from "../../resources/stones/1.Rubin.png"
+import stone2 from "../../resources/stones/2.Citrin.png"
+import stone3 from "../../resources/stones/3.Smaragd.png"
+import stone4 from "../../resources/stones/4.Jaspiz_Geschliffen.png"
+import stone5 from "../../resources/stones/5.Diamond_Herz_Orange.png"
+import stone6 from "../../resources/stones/6.Almandin_Geschliffen.png"
 
 const ImageSlider = () => {
     const [size, setSize] = useState([0, 0]);
@@ -77,6 +78,12 @@ const ImageSlider = () => {
                     <div style={style}>
                         <img style={imgStyle} src={stone4} alt="stone4"></img>
                     </div>
+                    <div style={style}>
+                        <img style={imgStyle} src={stone5} alt="stone5"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyle} src={stone6} alt="stone6"></img>
+                    </div>
                 </Slide>
                 :
                 <Slide {...propertiesBigSize}>
@@ -84,13 +91,19 @@ const ImageSlider = () => {
                         <img style={imgStyle} src={stone1} alt="stone1"></img>
                     </div>
                     <div style={style}>
-                        <img style={imgStyle} src={saphir} alt="saphir"></img>
+                        <img style={imgStyle} src={stone2} alt="stone2"></img>
                     </div>
                     <div style={style}>
                         <img style={imgStyle} src={stone3} alt="stone3"></img>
                     </div>
                     <div style={style}>
                         <img style={imgStyle} src={stone4} alt="stone4"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyle} src={stone5} alt="stone5"></img>
+                    </div>
+                    <div style={style}>
+                        <img style={imgStyle} src={stone6} alt="stone6"></img>
                     </div>
                 </Slide>
             }

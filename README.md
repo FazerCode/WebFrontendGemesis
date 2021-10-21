@@ -1,2 +1,2 @@
-# Web-Frontend Gemstones NFT
-Repository for the Gemstones NFT project
+# Web-Frontend Gemesis NFT
+Repository for the Gemesis NFT project
