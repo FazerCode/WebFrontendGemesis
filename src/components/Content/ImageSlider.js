@@ -5,10 +5,10 @@ import 'react-slideshow-image/dist/styles.css';
 // https://react-slideshow.herokuapp.com/api
 import stone1 from "../../resources/stones/1.Rubin.png"
 import stone2 from "../../resources/stones/2.Citrin.png"
-import stone3 from "../../resources/stones/3.Smaragd.png"
-import stone4 from "../../resources/stones/4.Jaspiz_Geschliffen.png"
+import stone3 from "../../resources/stones/3.Diamond.png"
+import stone4 from "../../resources/stones/4.Jaspiz.png"
 import stone5 from "../../resources/stones/5.Diamond_Herz_Orange.png"
-import stone6 from "../../resources/stones/6.Almandin_Geschliffen.png"
+import stone6 from "../../resources/stones/6.Almandin.png"
 
 const ImageSlider = () => {
     const [size, setSize] = useState([0, 0]);
@@ -30,6 +30,7 @@ const ImageSlider = () => {
 
     const style = {
         margin: '80px',
+        userDrag: 'none'
     };
 
     const imgStyle = {
@@ -37,33 +38,35 @@ const ImageSlider = () => {
         height: '100%',
         objectFit: 'contain',
         boxShadow: 'rgba(185, 85, 195, 0.8) 0px 0px 20px 0px',
-        borderRadius: '15px'
+        borderRadius: '15px',
+        userDrag: 'none'
     };
 
     const propertiesBigSize = {
-        duration: 5000,
-        transitionDuration: 2000,
+        duration: 0,
+        transitionDuration: 10000,
         slidesToShow: 2,
         slidesToScroll: 2,
         autoplay: true,
-        indicators: true,
+        indicators: false,
         arrows: false
 
     };
 
     const propertiesSmallSize = {
-        duration: 5000,
-        transitionDuration: 2000,
+        duration: 0,
+        transitionDuration: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        indicators: true,
-        arrows: false
+        indicators: false,
+        arrows: false,
 
     };
 
     return (
         <div>
+            <h2>Gemesis Stones</h2>
             {mediaQuery.matches ?
                 <Slide {...propertiesSmallSize} >
                     <div style={style}>

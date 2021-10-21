@@ -18,6 +18,10 @@
     background-color: black;
   }
 
+  img {
+    pointer-events: none;
+  }
+
   .background {
     /* background */
     /* overflow-y: hidden ! important;

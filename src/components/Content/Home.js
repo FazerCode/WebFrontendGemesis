@@ -12,7 +12,7 @@ const Home = () => {
         left: 50%;
         transform: translate(-50%, -50%);
         width: 300px;
-        background-image: linear-gradient(to right, rgba(230,147,112,0.1), rgba(230,147,112,0.4));
+        // background-image: linear-gradient(to right, rgba(230,147,112,0.1), rgba(230,147,112,0.4));
         border-radius: 50px;
     `;
 

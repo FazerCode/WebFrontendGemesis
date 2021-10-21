@@ -30,7 +30,7 @@ const Team = () => {
 
     return (
         <div className="container team" id="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-            <h1>Our Team</h1>
+            <h2>Our Team</h2>
             <TeamContainer className="team-info">
                 <Column>
                     <Card member="Fazer" role="Developer" image={logo}/>
