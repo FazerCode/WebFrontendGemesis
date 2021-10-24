@@ -86,8 +86,11 @@
     padding-top: 180px;
   }
 
-  .roadmap-info, .minter{
+  .roadmap-info {
+    margin-top: 140px;
     padding-top: 140px;
+    height: 80vH;
+    background-color: rgba(0,0,0,0.6);
   }
 
   .team {
