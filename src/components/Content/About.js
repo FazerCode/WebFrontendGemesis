@@ -3,6 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ImageSlider from "./ImageSlider";
 import Typist from 'react-typist';
+import logoLoading from "../../resources/gemesis_loading.gif";
+
 
 const About = () => {
     const [isVisible, setVisible] = useState(false);
@@ -50,7 +52,11 @@ const About = () => {
                             <p>To be continued...</p>
                         </div>
                     </Typist>
+
                     : <> </>}
+            </div>
+            <div>
+                <img id="logo" width="140px" height="auto" src={logoLoading} alt="logo" />
             </div>
             <ImageSlider />
         </div>

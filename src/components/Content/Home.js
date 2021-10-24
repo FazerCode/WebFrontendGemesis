@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion"
 import purpleLogo from "../../resources/gemesis_logo_purple.png"
 import styled from 'styled-components';
+import logoLoading from "../../resources/gemesis_loading.gif";
 
 const Home = () => {
 
