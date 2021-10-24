@@ -64,7 +64,7 @@ const ImageSlider = () => {
 
     return (
         <div>
-            <h2>Gemesis Stones</h2>
+            <h2>Gemesis Showcase</h2>
             {mediaQuery.matches ?
                 <Slide {...propertiesSmallSize} >
                     <div style={style}>
