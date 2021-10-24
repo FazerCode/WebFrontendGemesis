@@ -22,7 +22,7 @@ const Home = () => {
             <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >
                 <div className="container home" >
                     <div className="container" style={{ marginTop: 150, color: 'white' }}>
-                        <Logo width="140px" height="auto" src={purpleLogo} alt="logo" />
+                        <Logo id="logo" width="140px" height="auto" src={purpleLogo} alt="logo" />
                     </div>
                 </div>
             </motion.div>

@@ -258,3 +258,12 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+.rect {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  height: 450px;
+  width: 800px;
+  background-image: url('./resources/background6.png');
+}
