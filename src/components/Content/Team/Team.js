@@ -3,10 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Card from "./Card";
 import styled from "styled-components";
-import logo from "../../../resources/babyFalco.png"
-import logo2 from "../../../resources/babyFalco2.png"
-import logo3 from "../../../resources/babyFalco3.png"
-import logo4 from "../../../resources/babyFalco4.jpg"
+import picture from "../../../resources/gemesis_logo_purple.png";
 
 const TeamContainer = styled.div`
     display: flex;
@@ -26,23 +23,23 @@ const Team = () => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-      });
+    });
 
     return (
         <div className="container team" id="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <h2>Our Team</h2>
             <TeamContainer className="team-info">
                 <Column>
-                    <Card member="Fazer" role="Developer" image={logo}/>
+                    <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
                 </Column>
                 <Column>
-                    <Card member="Omega" role="Developer" image={logo2}/>
+                    <Card member="OmegaZero" role="Developer" image={picture} twitter="https://twitter.com/OmegaZeroCrypto" />
                 </Column>
                 <Column>
-                    <Card member="Birdie" role="Designer" image={logo3}/>
+                    <Card member="Birdie" role="Designer" image={picture} />
                 </Column>
                 <Column>
-                    <Card member="Deko" role="Designer" image={logo4}/>
+                    <Card member="Deko" role="Designer" image={picture} />
                 </Column>
             </TeamContainer>
         </div>

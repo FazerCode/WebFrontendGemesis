@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { FaTwitter } from 'react-icons/fa';
+
 
 const CardContainer = styled.div`
     background-color: black;
@@ -23,13 +25,14 @@ const Image = styled.img`
     max-height: 100%;    
     border-radius: 40px;
     color: #B955C3;
-    box-shadow: 5px 5px 8px 0 #B955C3;
+    box-shadow: 2px 2px 8px 3px #B955C3;
 
 `
 
 
 
-const Card = ({member, role, image}) => {
+const Card = ({member, role, image, twitter}) => {
+    console.log(twitter);
     return (
         <div className="container">
             <CardContainer>
@@ -37,6 +40,11 @@ const Card = ({member, role, image}) => {
                 <Description>
                     <h3>{member}</h3>
                     <h5>{role}</h5>
+                    {twitter !== undefined ?
+                    <a href={twitter} target="_blank" rel="noopener noreferrer">
+                        <FaTwitter />
+                    </a> : <> <FaTwitter color="transparent" /> </>
+                    }
                 </Description>
             </CardContainer>
 

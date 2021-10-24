@@ -7,8 +7,6 @@ import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import Scrollspy from 'react-scrollspy';
-import openseaLogo from "../../resources/openseaLogo.png";
-import openseaLogoHover from "../../resources/openseaLogoHover.png";
 import purpleLogoText from "../../resources/gemesis_logo_purple_text.png"
 import purpleLogo from "../../resources/gemesis_logo_purple_black.png"
 
@@ -203,14 +201,6 @@ const NavbarComp = () => {
               <Nav.Item>
                 <a href="https://discord.gg/aS5X7ZWc6C" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
                   <FaDiscord />
-                </a>
-              </Nav.Item>
-              <Nav.Item>
-                <a href="https://testnets.opensea.io/collection/gemesis" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
-                  <img className="openseaLogo" width="23px" height="auto" src={openseaLogo}
-                    onMouseOver={e => e.currentTarget.src = openseaLogoHover}
-                    onMouseOut={e => e.currentTarget.src = openseaLogo}
-                    alt="openseaLogo" />
                 </a>
               </Nav.Item>
             </Scrollspy>
