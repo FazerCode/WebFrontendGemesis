@@ -17,7 +17,7 @@ const About = () => {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container about">
             <div data-aos="fade-right" data-aos-id="super-duper" data-aos-offset="300" data-aos-easing="ease-in-sine" className="about-info" id="about">
                 <h2 style={{ marginBottom: '30px' }}>About</h2>
                 {isVisible ?
