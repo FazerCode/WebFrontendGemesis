@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
   
   .App {
     text-align: center;
@@ -86,7 +86,14 @@
     padding-top: 180px;
   }
 
-  .roadmap-info, .minter{
+  .roadmap-info{
+    padding-top: 140px;
+    background-color: rgba(0,0,0,0.6);
+    margin-top: 70px;
+    border-radius: 20px;
+  }
+
+  .minter{
     padding-top: 140px;
   }
 
