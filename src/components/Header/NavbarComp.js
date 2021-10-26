@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { NavHashLink as Link } from 'react-router-hash-link';
 import { Link } from 'react-scroll';
 import { AnimatePresence, motion } from "framer-motion"
 import { Navbar, Nav } from 'react-bootstrap';
@@ -8,8 +7,6 @@ import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import purpleLogoText from "../../resources/gemesis_logo_purple_text.png"
 import purpleLogo from "../../resources/gemesis_logo_purple_black.png"
-
-// https://codesandbox.io/s/o4ws2
 
 const Styles = styled.div`
 
