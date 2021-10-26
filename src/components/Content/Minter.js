@@ -19,7 +19,7 @@ const Minter = () => {
     <div id="minter" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
       <div className="container Minter">
 
-        <h1 id="title">🧙‍♂️ Minting soon on Ethereum 🧙‍♂️</h1>
+        <h1 id="title">💎 Minting soon on Ethereum 💎</h1>
         <button className="glow-on-hover" id="mintButton" onClick={onMintPressed}>
           MINT (Coming soon...)
         </button>

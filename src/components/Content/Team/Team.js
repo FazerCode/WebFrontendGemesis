@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import Card from "./Card";
 import styled from "styled-components";
 import picture from "../../../resources/gemesis_logo_purple.png";
+import omegaPicture from "../../../resources/Ape.png";
 
 const TeamContainer = styled.div`
     display: flex;
@@ -28,13 +29,13 @@ const Team = () => {
     return (
         <div className="container" id="team">
             <div className="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                <h2>Our Team</h2>
+                <h1>Our Team</h1>
                 <TeamContainer className="team-info"  >
                     <Column>
                         <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
                     </Column>
                     <Column>
-                        <Card member="OmegaZero" role="Developer" image={picture} twitter="https://twitter.com/OmegaZeroCrypto" />
+                        <Card member="OmegaZero" role="Developer" image={omegaPicture} twitter="https://twitter.com/OmegaZeroCrypto" />
                     </Column>
                     <Column>
                         <Card member="Birdie" role="Designer" image={picture} />
