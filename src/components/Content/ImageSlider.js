@@ -42,6 +42,11 @@ const ImageSlider = () => {
         userDrag: 'none'
     };
 
+    const showCase = {
+        marginTop: '50px',
+        height: '100vH',
+    };
+
     const propertiesBigSize = {
         duration: 0,
         transitionDuration: 10000,
@@ -63,7 +68,7 @@ const ImageSlider = () => {
     };
 
     return (
-        <div>
+        <div style={showCase}>
             <h2>Gemesis Showcase</h2>
             {mediaQuery.matches ?
                 <Slide {...propertiesSmallSize} >

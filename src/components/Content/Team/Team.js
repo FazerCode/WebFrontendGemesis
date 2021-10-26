@@ -26,22 +26,24 @@ const Team = () => {
     });
 
     return (
-        <div className="container team" id="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-            <h2>Our Team</h2>
-            <TeamContainer className="team-info">
-                <Column>
-                    <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
-                </Column>
-                <Column>
-                    <Card member="OmegaZero" role="Developer" image={picture} twitter="https://twitter.com/OmegaZeroCrypto" />
-                </Column>
-                <Column>
-                    <Card member="Birdie" role="Designer" image={picture} />
-                </Column>
-                <Column>
-                    <Card member="Deko" role="Designer" image={picture} />
-                </Column>
-            </TeamContainer>
+        <div className="container" id="team">
+            <div className="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <h2>Our Team</h2>
+                <TeamContainer className="team-info"  >
+                    <Column>
+                        <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
+                    </Column>
+                    <Column>
+                        <Card member="OmegaZero" role="Developer" image={picture} twitter="https://twitter.com/OmegaZeroCrypto" />
+                    </Column>
+                    <Column>
+                        <Card member="Birdie" role="Designer" image={picture} />
+                    </Column>
+                    <Column>
+                        <Card member="Deko" role="Designer" image={picture} />
+                    </Column>
+                </TeamContainer>
+            </div>
         </div>
     )
 }

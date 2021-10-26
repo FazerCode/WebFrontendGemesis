@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// import { NavHashLink as Link } from 'react-router-hash-link';
 import { Link } from 'react-scroll';
 import { AnimatePresence, motion } from "framer-motion"
 import { Navbar, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import Scrollspy from 'react-scrollspy';
 import purpleLogoText from "../../resources/gemesis_logo_purple_text.png"
 import purpleLogo from "../../resources/gemesis_logo_purple_black.png"
-
-// https://codesandbox.io/s/o4ws2
 
 const Styles = styled.div`
 
@@ -66,13 +62,11 @@ const Styles = styled.div`
     }
   }
 
-  .is-current {
-    a{
+  .active{
         color: #B955C3;
         &::after {
             width: 100%;
         }
-    }
   }
 
   .navbar {
@@ -133,7 +127,7 @@ const NavbarComp = () => {
 
   return (
     <Styles>
-      <Navbar className={ !showLogo && 'navbarTransparent'} expand="xl" expanded={expanded}>
+      <Navbar className={!showLogo && 'navbarTransparent'} expand="xl" expanded={expanded}>
         <Navbar.Brand className="d-none d-xl-block">
           <a href="/">
             <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
@@ -157,53 +151,51 @@ const NavbarComp = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
-            <Scrollspy items={['home', 'about', 'minter', 'roadmap', 'team']} currentClassName="is-current">
-              <Nav.Item>
-                <Link activeClass="active" spy={true} className="home" href="home" to="home" smooth={true}
-                  duration={1000}
-                  delay={10} onClick={() => { setExpanded(false) }} onSetActive={() => setShowLogo(false)} onSetInactive={() => setShowLogo(true)}>
-                  Home
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link activeClass="active" className="about" href="about" to="about" spy={true} hashSpy={true} smooth={true}
-                  duration={1000}
-                  delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
-                  About
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link activeClass="active" className="minter" href="minter" to="minter" spy={true} hashSpy={true} smooth={true}
-                  duration={1000}
-                  delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
-                  Minting
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link activeClass="active" className="roadmap" href="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
-                  duration={1000}
-                  delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
-                  Roadmap
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link activeClass="active" className="team" href="team" to="team" spy={true} hashSpy={true} smooth={true}
-                  duration={1000}
-                  delay={10} saveHashHistory={false}>
-                  Team
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <a href="https://twitter.com/gemesis_" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
-                  <FaTwitter />
-                </a>
-              </Nav.Item>
-              <Nav.Item>
-                <a href="https://discord.gg/aS5X7ZWc6C" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
-                  <FaDiscord />
-                </a>
-              </Nav.Item>
-            </Scrollspy>
+            <Nav.Item>
+              <Link activeClass="active" spy={true} href="home" to="home" smooth={true}
+                duration={1000}
+                delay={10} onClick={() => { setExpanded(false) }} onSetActive={() => setShowLogo(false)} onSetInactive={() => setShowLogo(true)}>
+                Home
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link activeClass="active" href="about" to="about" spy={true} hashSpy={true} smooth={true}
+                duration={1000}
+                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                About
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link activeClass="active" href="minter" to="minter" spy={true} hashSpy={true} smooth={true}
+                duration={1000}
+                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                Minting
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
+                duration={1000}
+                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                Roadmap
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true} smooth={true}
+                duration={1000}
+                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                Team
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <a href="https://twitter.com/gemesis_" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
+                <FaTwitter />
+              </a>
+            </Nav.Item>
+            <Nav.Item>
+              <a href="https://discord.gg/aS5X7ZWc6C" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
+                <FaDiscord />
+              </a>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
