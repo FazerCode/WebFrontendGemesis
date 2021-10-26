@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import purpleLogo from "../../resources/gemesis_logo_purple.png"
 import styled from 'styled-components';
 
+
 const Home = () => {
 
     const Logo = styled.img`
