@@ -67,7 +67,8 @@
   }
 
   h1 {
-    margin-left: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     font-family: 'Times New Roman', Times, serif;
   }
 
@@ -75,6 +76,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .showcase {
+    height: 100vh;
   }
 
   .home, .roadmap, .Minter{
@@ -85,6 +90,7 @@
     height: 100vh;
     padding-top: 180px;
     flex: 2;
+    font-size: 18px;
   }
 
   .about {
@@ -95,12 +101,14 @@
   .roadmap-info {
     margin-top: 140px;
     padding-top: 30px;
+    border-radius: 30px;
     height: 80vH;
     background-color: rgba(0,0,0,0.6);
   }
 
+
   .team {
-     height: 100vh;
+    height: 100vh;
     padding-top: 180px;
   }
   
@@ -116,6 +124,7 @@
     width: 100%;
   
   }
+
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

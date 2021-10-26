@@ -1,7 +1,6 @@
 import { React, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ImageSlider from "./ImageSlider";
 
 const About = () => {
 
@@ -13,7 +12,7 @@ const About = () => {
     return (
         <div className="container about">
             <div data-aos="fade-right" data-aos-id="super-duper" data-aos-offset="300" data-aos-easing="ease-in-sine" className="about-info" id="about">
-                <h2 style={{ marginBottom: '30px' }}>About</h2>
+                <h1 >About</h1>
                         <div>
                             <p> Year 2221. Moon Enceladus. Saturn. </p>
                             <p> Since we have abandoned Earth, a lot has happened. </p>
@@ -43,7 +42,7 @@ const About = () => {
                         </div>
              
             </div>
-            <ImageSlider />
+
         </div>
     )
 }

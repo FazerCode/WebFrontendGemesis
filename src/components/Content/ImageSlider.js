@@ -2,7 +2,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css';
-// https://react-slideshow.herokuapp.com/api
 import stone1 from "../../resources/stones/1.Rubin.png"
 import stone2 from "../../resources/stones/2.Citrin.png"
 import stone3 from "../../resources/stones/3.Diamond.png"
@@ -29,27 +28,31 @@ const ImageSlider = () => {
     }, [size])
 
     const style = {
-        margin: '80px',
+        marginLeft: '0px',
+        marginTop: '10px',
+        marginBottom: '10px',
         userDrag: 'none'
     };
 
     const imgStyle = {
-        width: '100%',
-        height: '100%',
-        objectFit: 'contain',
+        maxWidth: '80%',
+        objectFit: 'cover',
         boxShadow: 'rgba(185, 85, 195, 0.8) 0px 0px 20px 0px',
         borderRadius: '15px',
         userDrag: 'none'
     };
 
-    const showCase = {
+    const slider = {
         marginTop: '50px',
+        width: '100%',
+        left: '0px',
+        position: 'relative',
     };
 
     const propertiesBigSize = {
         duration: 0,
         transitionDuration: 10000,
-        slidesToShow: 2,
+        slidesToShow: 3.5,
         slidesToScroll: 2,
         autoplay: true,
         indicators: false,
@@ -67,51 +70,55 @@ const ImageSlider = () => {
     };
 
     return (
-        <div style={showCase}>
-            <h2>Gemesis Showcase</h2>
-            {mediaQuery.matches ?
-                <Slide {...propertiesSmallSize} >
-                    <div style={style}>
-                        <img style={imgStyle} src={stone1} alt="stone1"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone2} alt="stone2"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone3} alt="stone3"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone4} alt="stone4"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone5} alt="stone5"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone6} alt="stone6"></img>
-                    </div>
-                </Slide>
-                :
-                <Slide {...propertiesBigSize}>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone1} alt="stone1"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone2} alt="stone2"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone3} alt="stone3"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone4} alt="stone4"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone5} alt="stone5"></img>
-                    </div>
-                    <div style={style}>
-                        <img style={imgStyle} src={stone6} alt="stone6"></img>
-                    </div>
-                </Slide>
-            }
+        <div className="showCase">
+            <div className="container">
+                <h1>Gemesis Showcase</h1>
+            </div>
+            <div style={slider}>
+                {mediaQuery.matches ?
+                    <Slide {...propertiesSmallSize} >
+                        <div style={style}>
+                            <img style={imgStyle} src={stone1} alt="stone1"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone2} alt="stone2"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone3} alt="stone3"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone4} alt="stone4"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone5} alt="stone5"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone6} alt="stone6"></img>
+                        </div>
+                    </Slide>
+                    :
+                    <Slide {...propertiesBigSize}>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone1} alt="stone1"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone2} alt="stone2"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone3} alt="stone3"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone4} alt="stone4"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone5} alt="stone5"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone6} alt="stone6"></img>
+                        </div>
+                    </Slide>
+                }
+            </div>
         </div>
     );
 };
