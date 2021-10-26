@@ -44,7 +44,6 @@ const ImageSlider = () => {
 
     const showCase = {
         marginTop: '50px',
-        height: '100vH',
     };
 
     const propertiesBigSize = {

@@ -266,3 +266,31 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+
+.infoNFT {
+  --interval: 4s;
+  display: block;
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+  color: rgba(239, 163, 241, 0.808);
+  --color1: rgba(69, 8, 90, 0.37);
+  --color2: rgb(108, 14, 185);
+  --color3: rgb(165, 39, 214);
+  --color4: rgb(175, 92, 243);
+  font-size: '500';
+  font-family: 'Sriracha';    
+}
+
+@keyframes flicker {
+  50% {
+    color: rgb(248, 97, 173);
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}

@@ -16,6 +16,14 @@ const Home = () => {
         border-radius: 50px;
     `;
 
+    const Info = styled.div`
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0,0,0,0.6);
+    `
+
 
     return (
         <div className="background" id="home">
@@ -24,6 +32,9 @@ const Home = () => {
                     <div className="container" style={{ marginTop: 150, color: 'white' }}>
                         <Logo width="140px" height="auto" src={purpleLogo} alt="logo" />
                     </div>
+                    <Info className="infoNFT">
+                        <h2>Own a Gemesis NFT and earn passive ETH while holding it!</h2>
+                    </Info>
                 </div>
             </motion.div>
         </div>
