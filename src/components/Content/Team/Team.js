@@ -38,10 +38,10 @@ const Team = () => {
                         <Card member="OmegaZero" role="Developer" image={omegaPicture} twitter="https://twitter.com/OmegaZeroCrypto" />
                     </Column>
                     <Column>
-                        <Card member="Birdy" role="Designer" image={picture} />
+                        <Card member="Birdy" role="Artist" image={picture} />
                     </Column>
                     <Column>
-                        <Card member="Deko" role="Designer" image={picture} />
+                        <Card member="Deko" role="Artist" image={picture} />
                     </Column>
                 </TeamContainer>
             </div>
