@@ -35,7 +35,7 @@ const ImageSlider = () => {
     };
 
     const imgStyle = {
-        maxHeight: '50vH',
+        width: '80%',
         objectFit: 'cover',
         boxShadow: 'rgba(185, 85, 195, 0.8) 0px 0px 20px 0px',
         borderRadius: '15px',
@@ -71,7 +71,7 @@ const ImageSlider = () => {
     const propertiesSmallSize = {
         duration: 0,
         transitionDuration: 3000,
-        slidesToShow: 1,
+        slidesToShow: 1.5,
         slidesToScroll: 1,
         autoplay: true,
         indicators: false,

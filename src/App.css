@@ -84,6 +84,7 @@
 
   .home, .roadmap, .Minter{
     height: 100vh;
+    margin-bottom: 80px;
   }
 
   .about-info {
@@ -108,7 +109,8 @@
 
   .team {
     height: 100vh;
-    padding-top: 180px;
+    margin-top: 80px;
+    padding-top: 80px;
   }
   
   .Minter {

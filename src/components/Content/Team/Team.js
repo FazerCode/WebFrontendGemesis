@@ -27,24 +27,28 @@ const Team = () => {
     });
 
     return (
-        <div className="container" id="team">
-            <div className="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                <h1>Our Team</h1>
-                <TeamContainer>
-                    <Column>
-                        <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
-                    </Column>
-                    <Column>
-                        <Card member="OmegaZero" role="Developer" image={omegaPicture} twitter="https://twitter.com/OmegaZeroCrypto" />
-                    </Column>
-                    <Column>
-                        <Card member="Birdy" role="Artist" image={picture} />
-                    </Column>
-                    <Column>
-                        <Card member="Deko" role="Artist" image={picture} />
-                    </Column>
-                </TeamContainer>
+        <div id="team">
+            <div className="container team" >
+                <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h1>Our Team</h1>
+                    <TeamContainer  >
+                        <Column>
+                            <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
+                        </Column>
+                        <Column>
+                            <Card member="OmegaZero" role="Developer" image={omegaPicture} twitter="https://twitter.com/OmegaZeroCrypto" />
+                        </Column>
+                        <Column>
+                            <Card member="Birdy" role="Artist" image={picture} />
+                        </Column>
+                        <Column>
+                            <Card member="Deko" role="Artist" image={picture} />
+                        </Column>
+                    </TeamContainer>
+                </div>
+
             </div>
+
         </div>
     )
 }

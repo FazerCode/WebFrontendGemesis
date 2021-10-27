@@ -161,14 +161,14 @@ const NavbarComp = () => {
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
-                duration={1000}
+                duration={1000} offset={50}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Roadmap
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true} smooth={true}
-                duration={1000}
+                duration={1000} offset={50}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Team
               </Link>
