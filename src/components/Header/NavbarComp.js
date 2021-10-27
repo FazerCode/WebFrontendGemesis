@@ -147,28 +147,28 @@ const NavbarComp = () => {
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="about" to="about" spy={true} hashSpy={true}
-                duration={1000}
+                duration={1000} offset={52}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 About
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="minter" to="minter" spy={true} hashSpy={true} 
-                duration={1000}
+                duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Minting
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true} 
-                duration={1000} offset={50}
+                duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Roadmap
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true} 
-                duration={1000} offset={50}
+                duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Team
               </Link>
