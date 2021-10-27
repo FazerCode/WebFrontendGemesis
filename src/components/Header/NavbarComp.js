@@ -139,35 +139,35 @@ const NavbarComp = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Nav.Item>
-              <Link activeClass="active" spy={true} href="home" to="home" smooth={true}
+              <Link activeClass="active" spy={true} href="home" to="home" 
                 duration={1000}
                 delay={0} onClick={() => { setExpanded(false) }} onSetActive={() => setShowLogo(false)} onSetInactive={() => setShowLogo(true)}>
                 Home
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="about" to="about" spy={true} hashSpy={true} smooth={true}
+              <Link activeClass="active" href="about" to="about" spy={true} hashSpy={true}
                 duration={1000}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 About
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="minter" to="minter" spy={true} hashSpy={true} smooth={true}
+              <Link activeClass="active" href="minter" to="minter" spy={true} hashSpy={true} 
                 duration={1000}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Minting
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
+              <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true} 
                 duration={1000} offset={50}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Roadmap
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true} smooth={true}
+              <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true} 
                 duration={1000} offset={50}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Team
