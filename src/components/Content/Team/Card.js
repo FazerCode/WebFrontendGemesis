@@ -33,7 +33,6 @@ const Image = styled.img`
 
 
 const Card = ({member, role, image, twitter}) => {
-    console.log(twitter);
     return (
         <div className="container">
             <CardContainer>

@@ -2,12 +2,12 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css';
-import stone1 from "../../resources/stones/1.Rubin.png"
-import stone2 from "../../resources/stones/2.Citrin.png"
-import stone3 from "../../resources/stones/3.Diamond.png"
-import stone4 from "../../resources/stones/4.Jaspiz.png"
-import stone5 from "../../resources/stones/5.Diamond_Herz_Orange.png"
-import stone6 from "../../resources/stones/6.Almandin.png"
+import stone1 from "../../resources/stones/1.Almadin.jpg"
+import stone2 from "../../resources/stones/2.Amethyst.jpg"
+import stone3 from "../../resources/stones/3.Citrin.jpg"
+import stone4 from "../../resources/stones/4.Citrin2.jpg"
+import stone5 from "../../resources/stones/5.Jaspiz.jpg"
+import stone6 from "../../resources/stones/6.Rubin.jpg"
 
 const ImageSlider = () => {
     const [size, setSize] = useState([0, 0]);
@@ -35,6 +35,14 @@ const ImageSlider = () => {
     };
 
     const imgStyle = {
+        maxHeight: '50vH',
+        objectFit: 'cover',
+        boxShadow: 'rgba(185, 85, 195, 0.8) 0px 0px 20px 0px',
+        borderRadius: '15px',
+        userDrag: 'none'
+    };
+
+    const imgStyleBig = {
         maxWidth: '80%',
         objectFit: 'cover',
         boxShadow: 'rgba(185, 85, 195, 0.8) 0px 0px 20px 0px',
@@ -43,9 +51,10 @@ const ImageSlider = () => {
     };
 
     const slider = {
-        marginTop: '50px',
+        marginTop: '80px',
         width: '100%',
         left: '0px',
+        right: '0px',
         position: 'relative',
     };
 
@@ -99,22 +108,22 @@ const ImageSlider = () => {
                     :
                     <Slide {...propertiesBigSize}>
                         <div style={style}>
-                            <img style={imgStyle} src={stone1} alt="stone1"></img>
+                            <img style={imgStyleBig} src={stone1} alt="stone1"></img>
                         </div>
                         <div style={style}>
-                            <img style={imgStyle} src={stone2} alt="stone2"></img>
+                            <img style={imgStyleBig} src={stone2} alt="stone2"></img>
                         </div>
                         <div style={style}>
-                            <img style={imgStyle} src={stone3} alt="stone3"></img>
+                            <img style={imgStyleBig} src={stone3} alt="stone3"></img>
                         </div>
                         <div style={style}>
-                            <img style={imgStyle} src={stone4} alt="stone4"></img>
+                            <img style={imgStyleBig} src={stone4} alt="stone4"></img>
                         </div>
                         <div style={style}>
-                            <img style={imgStyle} src={stone5} alt="stone5"></img>
+                            <img style={imgStyleBig} src={stone5} alt="stone5"></img>
                         </div>
                         <div style={style}>
-                            <img style={imgStyle} src={stone6} alt="stone6"></img>
+                            <img style={imgStyleBig} src={stone6} alt="stone6"></img>
                         </div>
                     </Slide>
                 }

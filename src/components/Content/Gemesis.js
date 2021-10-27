@@ -6,7 +6,6 @@ import Home from './Home';
 import Minter from './Minter';
 import Roadmap from './Roadmap';
 import Team from './Team/Team';
-import ImageSlider from "./ImageSlider";
 
 
 const Gemesis = () => {
@@ -16,7 +15,6 @@ const Gemesis = () => {
             <NavbarComp />
             <Home />
             <About />
-            <ImageSlider />
             <Minter />
             <Roadmap />
             <Team />

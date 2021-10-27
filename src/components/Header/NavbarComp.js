@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { AnimatePresence, motion } from "framer-motion"
 import { Navbar, Nav } from 'react-bootstrap';
@@ -111,19 +111,6 @@ const Styles = styled.div`
 const NavbarComp = () => {
   const [expanded, setExpanded] = useState(false);
   const [showLogo, setShowLogo] = useState(false);
-  const [isMobile, setIsMobile] = useState(false)
-
-  const handleResize = () => {
-    if (window.innerWidth < 1200) {
-      setIsMobile(true)
-    } else {
-      setIsMobile(false)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize)
-  })
 
   return (
     <Styles>
@@ -135,7 +122,7 @@ const NavbarComp = () => {
         </Navbar.Brand>
 
         <AnimatePresence>
-          {(showLogo || isMobile) &&
+          {(showLogo) &&
             <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >
               <Navbar.Brand className="logo">
                 <a href="/">
@@ -154,35 +141,35 @@ const NavbarComp = () => {
             <Nav.Item>
               <Link activeClass="active" spy={true} href="home" to="home" smooth={true}
                 duration={1000}
-                delay={10} onClick={() => { setExpanded(false) }} onSetActive={() => setShowLogo(false)} onSetInactive={() => setShowLogo(true)}>
+                delay={0} onClick={() => { setExpanded(false) }} onSetActive={() => setShowLogo(false)} onSetInactive={() => setShowLogo(true)}>
                 Home
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="about" to="about" spy={true} hashSpy={true} smooth={true}
                 duration={1000}
-                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 About
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="minter" to="minter" spy={true} hashSpy={true} smooth={true}
                 duration={1000}
-                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Minting
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true} smooth={true}
                 duration={1000}
-                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Roadmap
               </Link>
             </Nav.Item>
             <Nav.Item>
               <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true} smooth={true}
                 duration={1000}
-                delay={10} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Team
               </Link>
             </Nav.Item>

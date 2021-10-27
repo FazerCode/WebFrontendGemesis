@@ -30,7 +30,7 @@ const Team = () => {
         <div className="container" id="team">
             <div className="team" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <h1>Our Team</h1>
-                <TeamContainer className="team-info"  >
+                <TeamContainer>
                     <Column>
                         <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
                     </Column>
