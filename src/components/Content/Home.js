@@ -3,10 +3,7 @@ import { motion } from "framer-motion"
 import purpleLogo from "../../resources/gemesis_logo_purple.png"
 import styled from 'styled-components';
 
-
-const Home = () => {
-
-    const Logo = styled.img`
+const Logo = styled.img`
         float: none;
         position: absolute;
         top: 30%;
@@ -17,7 +14,7 @@ const Home = () => {
         pointer-events: all;
     `;
 
-    const Link = styled.a`
+const Link = styled.a`
         &:hover {
         cursor: pointer;
         color: #B955C3;
@@ -25,7 +22,7 @@ const Home = () => {
 
     `
 
-    const Info = styled.div`
+const Info = styled.div`
         position: absolute;
         top: 60%;
         left: 50%;
@@ -37,6 +34,7 @@ const Home = () => {
     `
 
 
+const Home = () => {
     return (
         <div className="background" id="home">
             <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >

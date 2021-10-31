@@ -97,8 +97,8 @@ const Styles = styled.div`
   .logo {
     float: none;
     position: absolute;
-    top: 80%;
-    left: 48%;
+    top: 100%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
 

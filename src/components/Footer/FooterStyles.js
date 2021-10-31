@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
    
 export const Box = styled.div`
- 
   background: #333232;
   width: 100%;
   padding-top: 60px;
@@ -24,6 +23,8 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
+  align-items :center;
 
   @media (max-width: 1000px) {
     margin-bottom: 50px;
@@ -33,8 +34,8 @@ export const Column = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 
   @media (max-width: 1000px) {
@@ -65,11 +66,6 @@ export const Heading = styled.p`
 `;
 
 export const Image = styled.img`
-  margin-left: 65px;
-  margin-bottom: 80px;
-`;
-
-export const Logo = styled.img`
-  margin-bottom: 0px;
-
+  margin-bottom: 60px;
+  width: 140px;
 `;
