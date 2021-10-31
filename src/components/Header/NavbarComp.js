@@ -98,7 +98,7 @@ const Styles = styled.div`
     float: none;
     position: absolute;
     top: 80%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
   }
 
