@@ -39,11 +39,11 @@
   .background2 {
     position: relative;
     left: 0px;
-    background-image: url('./resources/background_city_blue2.jpg');
-    background-size: cover;
+    background-image: url('./resources/roadmap.jpg');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
   }
   
   .App-logo {

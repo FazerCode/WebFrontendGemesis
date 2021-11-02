@@ -45,7 +45,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <Info>
-                        <h2>Own a Gemesis NFT and earn passive ETH while holding it!</h2>
+                        <h2>Own a GΞMΞSIS NFT and earn passive ETH while holding it!</h2>
                     </Info>
                 </div>
             </motion.div>
