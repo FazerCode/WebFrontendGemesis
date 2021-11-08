@@ -3,8 +3,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Card from "./Card";
 import styled from "styled-components";
-import picture from "../../../resources/gemesis_logo_purple.png";
 import omegaPicture from "../../../resources/Ape.png";
+import birdyPicture from "../../../resources/stones/4.Citrin2.jpg"
+import dekoPicture from "../../../resources/stones/1.Almadin.jpg"
+import fazerPicture from "../../../resources/stones/2.Amethyst.jpg"
 
 const TeamContainer = styled.div`
     display: flex;
@@ -33,16 +35,16 @@ const Team = () => {
                     <h1>Our Team</h1>
                     <TeamContainer  >
                         <Column>
-                            <Card member="Fazer" role="Developer" image={picture} twitter="https://twitter.com/Fazer_Crypto" />
-                        </Column>
-                        <Column>
                             <Card member="OmegaZero" role="Developer" image={omegaPicture} twitter="https://twitter.com/OmegaZeroCrypto" />
                         </Column>
                         <Column>
-                            <Card member="Birdy" role="Artist" image={picture} twitter="https://twitter.com/BirdyGemesis" />
+                            <Card member="Fazer" role="Developer" image={fazerPicture} twitter="https://twitter.com/Fazer_Crypto" />
                         </Column>
                         <Column>
-                            <Card member="Deko" role="Artist" image={picture} />
+                            <Card member="Birdy" role="Artist" image={birdyPicture} twitter="https://twitter.com/BirdyGemesis" />
+                        </Column>
+                        <Column>
+                            <Card member="Deko" role="Artist" image={dekoPicture} />
                         </Column>
                     </TeamContainer>
                 </div>
