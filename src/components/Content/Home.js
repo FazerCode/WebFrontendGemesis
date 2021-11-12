@@ -56,7 +56,7 @@ const Home = () => {
                     <Heading>Welcome to GΞMΞSIS!</Heading>
                     <InfoText>GΞMΞSIS is a set of gemstones from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
                     <InfoText> Special NFTs with which we want to offer great value to users and citizens of the NFT space and metaverse.</InfoText>
-                    <InfoText>Besides of the awesome look, GΞMΞSIS is aninvestment that generates sustainable passive income to its holders!</InfoText>
+                    <InfoText>Besides of the awesome look, GΞMΞSIS is an investment that generates sustainable passive income to its holders!</InfoText>
                     <InfoText>... Mint is coming soon!</InfoText>
                 </Info>
             </motion.div>
