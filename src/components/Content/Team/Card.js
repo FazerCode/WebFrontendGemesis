@@ -13,15 +13,14 @@ const CardContainer = styled.div`
 `;
 
 const Description = styled.div`
-    // background-color: rgba(255,255,255,0.4);
     color: white;
-    margin: 15px;
+    margin: 18px;
     padding-left: 10px;
 `
 
 const Image = styled.img`
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 0px;
     max-width: 100%;
     max-height: 100%;     
     border-radius: 40px;

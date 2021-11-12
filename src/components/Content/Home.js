@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Logo = styled.img`
         float: none;
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 300px;
@@ -24,15 +24,21 @@ const Link = styled.a`
 
 const Info = styled.div`
         position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 42%;
+        left: 10%;
+        right: 10%;
         background-color: rgba(0,0,0,0.8);
-        text-align: center;
+        // text-align: center;
         border-radius: 20px;
         padding: 15px;
     `
 
+const InfoText = styled.h4`
+    margin-bottom: 15px;
+`
+const Heading = styled.h2`
+    margin-bottom: 18px;
+`
 
 const Home = () => {
     return (
@@ -44,10 +50,15 @@ const Home = () => {
                             <Logo width="140px" height="auto" src={purpleLogo} alt="logo" />
                         </Link>
                     </div>
-                    <Info>
-                        <h2>Own a GΞMΞSIS NFT and earn passive ETH while holding it!</h2>
-                    </Info>
+
                 </div>
+                <Info>
+                    <Heading>Welcome to GΞMΞSIS!</Heading>
+                    <InfoText>GΞMΞSIS is a set of gemstones from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
+                    <InfoText> Special NFTs with which we want to offer great value to users and citizens of the NFT space and metaverse.</InfoText>
+                    <InfoText>Besides of the awesome look, GΞMΞSIS is aninvestment that generates sustainable passive income to its holders!</InfoText>
+                    <InfoText>... Mint is coming soon!</InfoText>
+                </Info>
             </motion.div>
         </div>
     );

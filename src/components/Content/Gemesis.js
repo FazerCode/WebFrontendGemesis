@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer';
 import NavbarComp from '../Header/NavbarComp';
 import About from './About';
 import Home from './Home';
-import Minter from './Minter';
+import Showcase from './Showcase';
 import Roadmap from './Roadmap';
 import Team from './Team/Team';
 
@@ -15,7 +15,7 @@ const Gemesis = () => {
             <NavbarComp />
             <Home />
             <About />
-            <Minter />
+            <Showcase />
             <Roadmap />
             <Team />
             <Footer />

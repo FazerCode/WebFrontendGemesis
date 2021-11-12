@@ -98,7 +98,7 @@ const Styles = styled.div`
     float: none;
     position: absolute;
     top: 100%;
-    left: 50%;
+    left: 49.6%;
     transform: translate(-50%, -50%);
   }
 
@@ -153,10 +153,10 @@ const NavbarComp = () => {
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="minter" to="minter" spy={true} hashSpy={true} 
+              <Link activeClass="active" href="showcase" to="showcase" spy={true} hashSpy={true} 
                 duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
-                Minting
+                Showcase
               </Link>
             </Nav.Item>
             <Nav.Item>

@@ -25,7 +25,7 @@ const Roadmap = () => {
         <div className="background2" id="roadmap">
             <div className="roadmap-info roadmap container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <h1 style={{ marginLeft: 60 }}>Roadmap</h1>
-                <div className="container" style={{ marginTop: 45 }}>
+                <div style={{ marginTop: 45 }}>
                     <Timeline position="alternate">
                         <TimelineItem>
                             <TimelineOppositeContent
