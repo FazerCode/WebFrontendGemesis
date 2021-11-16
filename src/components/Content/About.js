@@ -27,7 +27,7 @@ const About = () => {
                             of the establishment and the last one was mined 60 years ago. Poverty and scarcity of
                             resources affect the majority of the working class. </p>
                         <p>
-                            Meanwhile on the moon Encladus, we the Team of <b>GΞMΞSIS</b>, a handful of courageous explorers and researchers,
+                            Meanwhile on the moon Enceladus, we the team of <b>GΞMΞSIS</b>, a handful of courageous explorers and researchers,
                             decide to launch the Revive the Earth project.
                             Minerals, rare stones and gemstones of the dying Earth are only owned
                             by the most powerful people and traded with prices that ordinary mortals could never afford.
