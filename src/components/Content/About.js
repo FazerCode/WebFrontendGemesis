@@ -24,13 +24,13 @@ const About = () => {
                         <p> Due to high inflation, people are looking for new assets, but most of
                             the resources are already exhausted or are only in the hands of the upper class
                             of the population. The once popular 21,000,000 Bitcoins are also already in the hands
-                            of the establishment and the last one was mined 60 years ago. Poverty and scarcity of
+                            of the establishment and the last one was mined 81 years ago. Poverty and scarcity of
                             resources affect the majority of the working class. </p>
                         <p>
-                            Meanwhile on the moon Enceladus, we the team of <b>GΞMΞSIS</b>, a handful of courageous explorers and researchers,
-                            decide to launch the Revive the Earth project.
+                            Meanwhile on the moon Enceladus, we the team of <b>GΞMΞSIS</b>, a handful of courageous prospectors and researchers,
+                            decide to launch the "Revive the Earth" project.
                             Minerals, rare stones and gemstones of the dying Earth are only owned
-                            by the most powerful people and traded with prices that ordinary mortals could never afford.
+                            by the most powerful people and traded at unaffordable prices.
                             Therefore, we are now heading to Earth to collect these long-forgotten materials and offer people a new kind
                             of sustainable investment.
                         </p>
@@ -38,7 +38,7 @@ const About = () => {
                             processed by the best craftsmanship and stored in gravity boxes.
                             The <b>GΞMΞSIS</b> Stones.
                         </p>
-                        <p>Now is the time to start redistributing the wealth over the entire population of Jupiter!!!
+                        <p>Now is the time to start redistributing the wealth over the entire population of Enceladus!!!
                             But this is just the beginning. </p>
                         <p>To be continued...</p>
                     </div>
