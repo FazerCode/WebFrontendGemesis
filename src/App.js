@@ -7,6 +7,7 @@ import Terms from './components/Terms/Terms';
 import Gemesis from './components/Content/Gemesis';
 import ReactGA from 'react-ga';
 import 'babel-polyfill'
+import Minter from './components/Minter/Minter'
 
 // DATA AOS for animated components on scrolling
 
@@ -28,6 +29,10 @@ const App = () => {
           <Route exact path="/" component={Gemesis} />
           <Route exact path="/terms" render={() => {
             return <Terms />
+          }}>
+          </Route>
+          <Route exact path="/mint" render={() => {
+            return <Minter />
           }}>
           </Route>
         </Switch>

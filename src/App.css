@@ -85,6 +85,10 @@
     margin-bottom: 80px;
   }
 
+  .mintpage{
+    height: 100vh;
+  }
+
   .roadmap {
     flex: 1;     
   }
@@ -107,7 +111,6 @@
     border-radius: 30px;
     background-color: rgba(0,0,0,0.6);
   }
-
 
   .team {
     height: 100vh;
@@ -142,10 +145,6 @@
     border-color: rgba(4, 4, 5, 0.4);
   }
   
-  button:hover {
-    margin-top: -1px;
-  }
-  
   #title {
     padding-top: 32px;
   }
@@ -158,27 +157,16 @@
   }
   
   #walletButton {
-
-    float: right;
-    background-color: #B955C3;
-    color: #000;
-    margin-top: 120px;
-    line-height: 16px;
-  }
-  
-  #walletButton:focus {
-    outline:none;
-    border: none;
-  }
-  
-  #walletButton:hover {
-    outline:none;
-    border :none;
+    width: 300px;
   }
   
   #mintButton {
     margin-top: 40px;
     line-height: 16px;
+  }
+
+  .minter {
+    margin-top: 150px;
   }
 
   .footerLink {
@@ -259,7 +247,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(90, 3, 148);
+    background: rgb(120, 39, 130);
     left: 0;
     top: 0;
     border-radius: 10px;
