@@ -10,7 +10,7 @@ const web3 = createAlchemyWeb3(alchemyKey);
 // const contractABI = require('./contract-abi.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
 const contractABI = require('./contract-abi2.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
 // const contractAddress = "0x6D3bCd6C1E89956BD92bD4b679191abD7798174d"; //HERE WE SHOULD ADD OUR CONTRACT ADDRESS
-const contractAddress = "0x35B8e7C3036c4A3f38b82C7fdf650a7C6FCCe5d7";
+const contractAddress = "0x5b3126A10bad912f00b6a84376B95e99F8b9A9d2";
 
 
 // var dateTimeStamp = web3.eth.getBlock(1920050).timestamp //outputs 1469021581 
@@ -58,7 +58,7 @@ export const connectWallet = async () => {
 
 
 
-export const mintNFT = async () => {
+export const mintNFT = async (mintamount) => {
     //error handling
     //if not formated properly return false
     // if (url.trim() === "" || (name.trim() === "" || description.trim() === "")) {
@@ -75,19 +75,19 @@ export const mintNFT = async () => {
     // metadata.description = description;
 
     // TODO: metadata should be loaded randomly
-    console.log(metadata);
+    // console.log(metadata);
 
-    //make pinata call
-    const pinataResponse = await pinJSONToIPFS(metadata);
-    //parse for errors
-    if (!pinataResponse.success) {
-        return {
-            success: false,
-            status: "😢 Something went wrong while uploading your tokenURI.",
-        }
-    }
+    // //make pinata call
+    // const pinataResponse = await pinJSONToIPFS(metadata);
+    // //parse for errors
+    // if (!pinataResponse.success) {
+    //     return {
+    //         success: false,
+    //         status: "😢 Something went wrong while uploading your tokenURI.",
+    //     }
+    // }
     //this is the metadata of the nft which needs to be stored in ipfs
-    const tokenURI = pinataResponse.pinataUrl;
+    // const tokenURI = pinataResponse.pinataUrl;
 
     //Set contract
     window.contract = await new web3.eth.Contract(contractABI, contractAddress);
@@ -95,22 +95,22 @@ export const mintNFT = async () => {
     console.log(window.contract.methods.totalSupply());
 
     //
-    var mintUpdateEvent = window.contract.events.MintCooldownUpdated(function(error, result){
-        if(error)
-        {
-            console.log(error);
-            return
-        }
-        console.log(result);
-        return result;
-    })
+    // var mintUpdateEvent = window.contract.events.MintCooldownUpdated(function(error, result){
+    //     if(error)
+    //     {
+    //         console.log(error);
+    //         return
+    //     }
+    //     console.log(result);
+    //     return result;
+    // })
 
     //set up your Ethereum transaction
     const transactionParameters = {
         to: contractAddress, // Required except during contract publications.   //SENDING ETH TO OUT ADDRESS
         from: window.ethereum.selectedAddress, // must match user's active address.
-        value: parseInt(web3.utils.toWei("0.0001","ether")).toString(16), // set mint price
-        'data': window.contract.methods.mint(window.ethereum.selectedAddress, tokenURI).encodeABI() //make call to NFT smart contract !! Change id on new mint
+        value: parseInt(web3.utils.toWei("0.00001","ether")).toString(16), // set mint price
+        'data': window.contract.methods.mint(mintamount).encodeABI() //make call to NFT smart contract !! Change id on new mint
     };
 
     //sign the transaction via Metamask
@@ -123,7 +123,7 @@ export const mintNFT = async () => {
         return {
             success: true,
             status: "✅ Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash + "\n"
-            + "TimeStamp of mint: " + mintUpdateEvent.args.timeStamp + " Minter: " + mintUpdateEvent.args.minter
+            // + "TimeStamp of mint: " + mintUpdateEvent.args.timeStamp + " Minter: " + mintUpdateEvent.args.minter
 
         }
     } catch (error) {

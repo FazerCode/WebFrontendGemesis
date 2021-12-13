@@ -66,8 +66,8 @@ const Minter = (props) => {
     if (mintAmount > 0 && mintAmount <= 20) {
       setMintSuccess("true");
       console.log(mintAmount);
-      // const { status } = await mintNFT(url, name, description);
-      // setStatus(status);
+      const { status } = await mintNFT(mintAmount);
+      setStatus(status);
     } else {
       setMintSuccess("false");
       console.log("cant mint");
