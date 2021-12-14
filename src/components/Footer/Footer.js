@@ -29,7 +29,7 @@ const Footer = () => {
                 <FaTwitter />
               </span>
             </FooterLink>
-            <FooterLink href="https://discord.gg/aS5X7ZWc6C" target="_blank" rel="noopener noreferrer">
+            <FooterLink href="https://discord.gg/gemesis" target="_blank" rel="noopener noreferrer">
               <span>
                 <FaDiscord />
               </span>

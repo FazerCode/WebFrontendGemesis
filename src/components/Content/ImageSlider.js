@@ -2,12 +2,19 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css';
-import stone1 from "../../resources/stones/1.Almadin.jpg"
-import stone2 from "../../resources/stones/2.Amethyst.jpg"
-import stone3 from "../../resources/stones/3.Citrin.jpg"
-import stone4 from "../../resources/stones/4.Citrin2.jpg"
-import stone5 from "../../resources/stones/5.Jaspiz.jpg"
-import stone6 from "../../resources/stones/6.Rubin.jpg"
+import stone1 from "../../resources/stones/gemesis_1.png"
+import stone2 from "../../resources/stones/gemesis_2.png"
+import stone3 from "../../resources/stones/gemesis_3.png"
+import stone4 from "../../resources/stones/gemesis_4.png"
+import stone5 from "../../resources/stones/gemesis_5.png"
+import stone6 from "../../resources/stones/gemesis_6.png"
+import stone7 from "../../resources/stones/gemesis_7.png"
+import stone8 from "../../resources/stones/gemesis_8.png"
+import stone9 from "../../resources/stones/gemesis_9.png"
+import stone10 from "../../resources/stones/gemesis_10.png"
+import stone11 from "../../resources/stones/gemesis_11.png"
+import stone12 from "../../resources/stones/gemesis_12.png"
+import stone13 from "../../resources/stones/gemesis_13.png"
 
 const ImageSlider = () => {
     const [size, setSize] = useState([0, 0]);
@@ -124,6 +131,27 @@ const ImageSlider = () => {
                         </div>
                         <div style={style}>
                             <img style={imgStyleBig} src={stone6} alt="stone6"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone7} alt="stone7"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone8} alt="stone8"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone9} alt="stone9"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone10} alt="stone10"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone11} alt="stone11"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone12} alt="stone12"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone13} alt="stone13"></img>
                         </div>
                     </Slide>
                 }

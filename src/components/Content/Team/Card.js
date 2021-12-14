@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaTwitter } from 'react-icons/fa';
+import openseaLogo from "../../../resources/openseaLogo_blue.png"
 
 
 const CardContainer = styled.div`
@@ -29,9 +30,12 @@ const Image = styled.img`
 
 `
 
+const Opensea = styled.img`
+    width: 20px;
+`
 
 
-const Card = ({member, role, image, twitter}) => {
+const Card = ({member, role, image, twitter, opensea}) => {
     return (
         <div className="container">
             <CardContainer>
@@ -42,7 +46,12 @@ const Card = ({member, role, image, twitter}) => {
                     {twitter !== undefined ?
                     <a href={twitter} target="_blank" rel="noopener noreferrer">
                         <FaTwitter />
-                    </a> : <> <FaTwitter color="transparent" /> </>
+                    </a> : <> </>
+                    }
+                      {opensea !== undefined ?
+                    <a href={opensea} target="_blank" rel="noopener noreferrer">
+                        <Opensea  src={openseaLogo} alt="opensea"/>
+                    </a> : <>  </>
                     }
                 </Description>
             </CardContainer>

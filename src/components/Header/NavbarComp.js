@@ -179,7 +179,7 @@ const NavbarComp = () => {
               </a>
             </Nav.Item>
             <Nav.Item>
-              <a href="https://discord.gg/aS5X7ZWc6C" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
+              <a href="https://discord.gg/gemesis" target="_blank" rel="noopener noreferrer" onClick={() => setExpanded(false)}>
                 <FaDiscord />
               </a>
             </Nav.Item>

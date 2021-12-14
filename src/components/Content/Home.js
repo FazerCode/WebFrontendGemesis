@@ -28,8 +28,8 @@ const Info = styled.div`
         left: 10%;
         right: 10%;
         background-color: rgba(0,0,0,0.8);
-        // text-align: center;
-        border-radius: 20px;
+        text-align: center;
+        border-radius: 40px;
         padding: 15px;
     `
 
@@ -38,6 +38,7 @@ const InfoText = styled.h4`
 `
 const Heading = styled.h2`
     margin-bottom: 18px;
+    text-align: center;
 `
 
 const Home = () => {
@@ -54,10 +55,10 @@ const Home = () => {
                 </div>
                 <Info>
                     <Heading>Welcome to GΞMΞSIS!</Heading>
-                    <InfoText>GΞMΞSIS is a set of gemstones from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
+                    <InfoText>GΞMΞSIS is a set of <b style={{color: "#B955C3"}}>9669 gemstones</b> from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
                     <InfoText> Special NFTs with which we want to offer great value to users and citizens of the NFT space and metaverse.</InfoText>
-                    <InfoText>Besides of the awesome look, GΞMΞSIS is an investment that generates sustainable passive income to its holders!</InfoText>
-                    <InfoText>... Mint is coming soon!</InfoText>
+                    <InfoText>Besides of the awesome look, GΞMΞSIS is an investment that generates sustainable <b style={{color: "#B955C3"}}>passive income</b> to its holders!</InfoText>
+                    <InfoText><b style={{color: "#B955C3"}}>Mint</b> on the <b style={{color: "#B955C3"}}>2nd January 2021</b>!</InfoText>
                 </Info>
             </motion.div>
         </div>
