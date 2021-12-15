@@ -118,6 +118,11 @@
     margin-top: 80px;
     padding-top: 80px;
   }
+
+  .faqs {
+    height: 100vh;
+    padding-top: 180px;
+  }
   
   .showcase {
     height: 100vh;

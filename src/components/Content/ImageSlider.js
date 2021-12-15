@@ -139,14 +139,15 @@ const ImageSlider = () => {
                             <img style={imgStyleBig} src={stone8} alt="stone8"></img>
                         </div>
                         <div style={style}>
+                            <img style={imgStyleBig} src={stone11} alt="stone11"></img>
+                        </div>
+                        <div style={style}>
                             <img style={imgStyleBig} src={stone9} alt="stone9"></img>
                         </div>
                         <div style={style}>
                             <img style={imgStyleBig} src={stone10} alt="stone10"></img>
                         </div>
-                        <div style={style}>
-                            <img style={imgStyleBig} src={stone11} alt="stone11"></img>
-                        </div>
+                       
                         <div style={style}>
                             <img style={imgStyleBig} src={stone12} alt="stone12"></img>
                         </div>
