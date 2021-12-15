@@ -4,9 +4,10 @@ import "aos/dist/aos.css";
 import Card from "./Card";
 import styled from "styled-components";
 import omegaPicture from "../../../resources/Ape.png";
-import birdyPicture from "../../../resources/stones/4.Citrin2.jpg"
-import dekoPicture from "../../../resources/stones/1.Almadin.jpg"
-import fazerPicture from "../../../resources/stones/2.Amethyst.jpg"
+import birdyPicture from "../../../resources/mutant.gif"
+import dekoPicture from "../../../resources/pedgy.png"
+import fazerPicture from "../../../resources/punk.png"
+import advisor from "../../../resources/punk2.png"
 
 const TeamContainer = styled.div`
     display: flex;
@@ -32,7 +33,7 @@ const Team = () => {
         <div id="team">
             <div className="container team" >
                 <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h1>Our Team</h1>
+                    <h1>GΞMΞSIS Family</h1>
                     <TeamContainer  >
                         <Column>
                             <Card member="OmegaZero" role="Developer" image={omegaPicture} twitter="https://twitter.com/OmegaZeroCrypto" />
@@ -45,6 +46,9 @@ const Team = () => {
                         </Column>
                         <Column>
                             <Card member="Deko" role="Artist" image={dekoPicture} />
+                        </Column>
+                        <Column>
+                            <Card member="moonlanding" role="Advisor" image={advisor} opensea="https://opensea.io/moonlanding" />
                         </Column>
                     </TeamContainer>
                 </div>

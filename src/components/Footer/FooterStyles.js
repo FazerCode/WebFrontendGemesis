@@ -6,7 +6,7 @@ export const Box = styled.div`
   width: 100%;
   padding-top: 60px;
   padding-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 350px;
   margin-bottom: 0px;
 
   @media (max-width: 1200px) {
@@ -16,12 +16,12 @@ export const Box = styled.div`
   
   @media (max-width: 1000px) {
     padding: 70px 30px;
-    margin-top: 400px;
+    margin-top: 800px;
   }
 
   @media (max-width: 768px) {
     padding: 70px 30px;
-    margin-top: 1200px;
+    margin-top: 1600px;
   }
 `;
    

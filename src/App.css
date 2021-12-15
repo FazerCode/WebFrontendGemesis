@@ -22,6 +22,10 @@
     pointer-events: none;
   }
 
+  h1 {
+    text-align: center;
+  }
+
   .background {
     /* background */
     /* overflow-y: hidden ! important;
@@ -116,6 +120,11 @@
     height: 100vh;
     margin-top: 80px;
     padding-top: 80px;
+  }
+
+  .faqs {
+    height: 100vh;
+    padding-top: 180px;
   }
   
   .showcase {

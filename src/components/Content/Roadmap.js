@@ -24,7 +24,7 @@ const Roadmap = () => {
     return (
         <div className="background2" id="roadmap">
             <div className="roadmap-info roadmap container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                <h1 style={{ marginLeft: 60 }}>Roadmap</h1>
+                <h1 >Roadmap</h1>
                 <div style={{ marginTop: 45 }}>
                     <Timeline position="alternate">
                         <TimelineItem>
@@ -36,7 +36,7 @@ const Roadmap = () => {
                                 25 %
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <TimelineConnector sx={{bgcolor: 'secondary.main' }} />
+                                <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                                 <TimelineDot color="secondary" variant="outlined">
                                     <IconContext.Provider value={{ size: "2.2em" }}>
                                         <div>
@@ -157,15 +157,15 @@ const Roadmap = () => {
                             </TimelineSeparator>
                             <TimelineContent >
                                 <Typography variant="h6" component="span">
-                                    GΞMΞSIS Factory
-                                </Typography>
-                                <Typography style={{marginBottom: 25}}>Starting to implement GΞMΞSIS Factory
-                                    ... stay tuned</Typography>
-                                <Typography variant="h6" component="span">
                                     Team Tattoos
                                 </Typography>
-                                <Typography>The GΞMΞSIS team is getting a tattoo with the GΞMΞSIS logo
+                                <Typography style={{ marginBottom: 25 }}>The GΞMΞSIS team is getting a tattoo with the GΞMΞSIS logo
                                     to show the dedication to the project. </Typography>
+                                <Typography variant="h6" component="span">
+                                    GΞMΞSIS Factory
+                                </Typography>
+                                <Typography>Starting to implement GΞMΞSIS Factory
+                                    ... stay tuned</Typography>
                             </TimelineContent>
                         </TimelineItem>
                     </Timeline>
