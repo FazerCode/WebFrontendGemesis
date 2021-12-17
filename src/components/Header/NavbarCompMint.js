@@ -165,6 +165,13 @@ const NavbarComp = () => {
               </a>
             </Nav.Item>
             <Nav.Item>
+              <a activeClass="active" href="/#faqs" to="/#faqs" spy={true} hashSpy={true}
+                duration={1000} offset={53}
+                delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                FAQs
+              </a>
+            </Nav.Item>
+            <Nav.Item>
               <a activeClass="active" href="/#team" to="/#team" spy={true} hashSpy={true}
                 duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
