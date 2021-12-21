@@ -24,7 +24,7 @@ const Roadmap = () => {
     return (
         <div className="background2" id="roadmap">
             <div className="roadmap-info roadmap container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                <h1 >Roadmap</h1>
+                <h1 className="header" >ROADMAP</h1>
                 <div style={{ marginTop: 45 }}>
                     <Timeline position="alternate">
                         <TimelineItem>
@@ -32,6 +32,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
+                                fontFamily="Nineteenth"
                             >
                                 25 %
                             </TimelineOppositeContent>
@@ -47,7 +48,7 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" component="span">
+                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
                                     Giveaway
                                 </Typography>
                                 <Typography>Giveaway of 10 GΞMΞSIS NFTs
@@ -59,6 +60,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
+                                fontFamily="Nineteenth"
                             >
                                 50 %
                             </TimelineOppositeContent>
@@ -74,12 +76,12 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" component="span">
+                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
                                     Donation
                                 </Typography>
-                                <Typography>5 ETH Donation for amputee victims of blood diamonds
+                                <Typography fontFamily="Nineteenth">5 ETH Donation for amputee victims of blood diamonds
                                 </Typography>
-                                <Typography>
+                                <Typography fontFamily="Nineteenth">
                                     1 ETH to a lucky community member
                                 </Typography>
                             </TimelineContent>
@@ -89,6 +91,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
+                                fontFamily="Nineteenth"
                             >
                                 75 %
                             </TimelineOppositeContent>
@@ -104,10 +107,10 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" component="span">
+                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
                                     Eternal Stones
                                 </Typography>
-                                <Typography>Drop of the 5 Eternal stones which come with very unique Utility</Typography>
+                                <Typography fontFamily="Nineteenth">Drop of the 5 Eternal stones which come with very unique Utility</Typography>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
@@ -115,6 +118,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
+                                fontFamily="Nineteenth"
                             >
                                 100 %
                             </TimelineOppositeContent>
@@ -130,10 +134,12 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" component="span">
-                                    Passive Income
+                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
+                                    Re-Distribute
                                 </Typography>
-                                <Typography>Deploying the smart contract which distributes the secondary market sales to all GΞMΞSIS holders</Typography>
+                                <Typography fontFamily="Nineteenth">
+                                    Deploying the smart contract which distributes the secondary market sales to all GΞMΞSIS holders
+                                </Typography>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
@@ -141,6 +147,8 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
+                                color="#B955C3"
+                                fontFamily="Nineteenth"
                             >
                                 FUTURE
                             </TimelineOppositeContent>
@@ -156,15 +164,17 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" component="span">
+                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
                                     Team Tattoos
                                 </Typography>
-                                <Typography style={{ marginBottom: 25 }}>The GΞMΞSIS team is getting a tattoo with the GΞMΞSIS logo
+                                <Typography fontFamily="Nineteenth" style={{ marginBottom: 25 }}>The GΞMΞSIS team is getting a tattoo with the GΞMΞSIS logo
                                     to show the dedication to the project. </Typography>
-                                <Typography variant="h6" component="span">
+                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
                                     GΞMΞSIS Factory
                                 </Typography>
-                                <Typography>Starting to implement GΞMΞSIS Factory
+                                <Typography fontFamily="Nineteenth">Starting to implement GΞMΞSIS Factory
+                                    ... stay tuned</Typography>
+                                <Typography fontFamily="Nineteenth">
                                     ... stay tuned</Typography>
                             </TimelineContent>
                         </TimelineItem>

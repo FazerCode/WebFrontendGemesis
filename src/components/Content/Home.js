@@ -28,6 +28,7 @@ const Info = styled.div`
         left: 10%;
         right: 10%;
         background-color: rgba(0,0,0,0.8);
+        box-shadow: 2px 2px 8px 3px #B955C3;
         text-align: center;
         border-radius: 40px;
         padding: 15px;
@@ -35,6 +36,7 @@ const Info = styled.div`
 
 const InfoText = styled.h4`
     margin-bottom: 15px;
+    font-family: "Nineteenth";
 `
 const Heading = styled.h2`
     margin-bottom: 18px;
@@ -54,10 +56,9 @@ const Home = () => {
 
                 </div>
                 <Info>
-                    <Heading>Welcome to GΞMΞSIS!</Heading>
+                    <Heading className='header'>Welcome to GEMESIS!</Heading>
                     <InfoText>GΞMΞSIS is a set of <b style={{color: "#B955C3"}}>9669 gemstones</b> from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
-                    <InfoText> Special NFTs with which we want to offer great value to users and citizens of the NFT space and metaverse.</InfoText>
-                    <InfoText>Besides of the awesome look, GΞMΞSIS is an investment that generates sustainable <b style={{color: "#B955C3"}}>passive income</b> to its holders!</InfoText>
+                    <InfoText>Besides the awesome look, GΞMΞSIS is a project that want to <b style={{color: "#B955C3"}}>redistribute earnings</b> back to its holders!</InfoText>
                     <InfoText><b style={{color: "#B955C3"}}>Mint</b> on the <b style={{color: "#B955C3"}}>2nd January 2021</b>!</InfoText>
                 </Info>
             </motion.div>

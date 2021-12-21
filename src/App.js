@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import './index.css';
 import React, { useEffect } from 'react';
 import { AnimatePresence } from "framer-motion";
 import { Route, Switch } from 'react-router';

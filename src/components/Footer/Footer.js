@@ -14,7 +14,7 @@ import logo from "../../resources/gemesis_logo_purple.png";
 
 const Footer = () => {
   return (
-    <Box>
+    <Box className="text">
       <Container>
         <Row>
           <Column>

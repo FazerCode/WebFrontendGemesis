@@ -31,9 +31,9 @@ const Team = () => {
 
     return (
         <div id="team">
-            <div className="container team" >
+            <div className="container team text" >
                 <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h1>GΞMΞSIS Family</h1>
+                    <h1 className="header">GEMESIS FAMILY</h1>
                     <TeamContainer  >
                         <Column>
                             <Card member="OmegaZero" role="Developer" image={omegaPicture} twitter="https://twitter.com/OmegaZeroCrypto" />

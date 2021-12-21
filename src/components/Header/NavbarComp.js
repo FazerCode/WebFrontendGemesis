@@ -1,28 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import { AnimatePresence, motion } from "framer-motion"
 import { Navbar, Nav } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FaDiscord, FaTwitter, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import purpleLogoText from "../../resources/gemesis_logo_purple_text.png"
-import purpleLogo from "../../resources/gemesis_logo_purple_black.png"
 
 const Styles = styled.div`
-
   .navbar-collapse {
     text-align: right;
     justify-content: flex-end;
 
-    @media (max-width: 991.98px) {
+    @media (max-width: 1199px) {
       position: absolute;
       top: 100%;
       right: 0;
-      width: 150px;
-      padding-right: 20px;
-      background-color: rgba(67,67,67,0.8);
+      width: 100%;
+      padding: 20px;
+      background-color: rgba(67,67,67,0.9);
       text-align: center; 
-      border-radius: 0px 0px 0px 20px;
+      border-radius: 0px 0px 12px 12px;
       border-bottom: inset;
       border-left: inset;
       border-color: #B955C3;   
@@ -32,9 +29,16 @@ const Styles = styled.div`
 
   .navbar-brand {
     padding: 7px 14px 0px 20px;
+    @media (max-width: 1199px) {
+      float: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   } 
 
-  @media (max-width: 991.98px) {
+  @media (max-width: max-width: 1199px) {
     ul {
       display: flex;
       flex-direction: column;
@@ -50,8 +54,8 @@ const Styles = styled.div`
 
   a {
     color: white;
-    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
-    font-size: 20px;
+    font-family: "Nineteenth";
+    font-size: 22px;
     font-weight: bold;
     -webkit-text-stroke: 0.2px white;
     padding: 10px;
@@ -94,14 +98,6 @@ const Styles = styled.div`
     right: 5%;
   }
 
-  .logo {
-    float: none;
-    position: absolute;
-    top: 100%;
-    left: 49.6%;
-    transform: translate(-50%, -50%);
-  }
-
   .openseaLogo {
     pointer-events: all;
   }
@@ -115,23 +111,11 @@ const NavbarComp = () => {
   return (
     <Styles>
       <Navbar className={!showLogo && 'navbarTransparent'} expand="xl" expanded={expanded}>
-        <Navbar.Brand className="d-none d-xl-block">
+        <Navbar.Brand>
           <a href="/">
-            <img width="150px" height="auto" className="img-responsive hidden-xs" src={purpleLogoText} alt="logo" />
+            <img width="150px" className='logo' src={purpleLogoText} alt="logo" />
           </a>
         </Navbar.Brand>
-
-        <AnimatePresence>
-          {(showLogo) &&
-            <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >
-              <Navbar.Brand className="logo">
-                <a href="/">
-                  <img width="140px" height="auto" src={purpleLogo} alt="logo" />
-                </a>
-              </Navbar.Brand>
-            </motion.div>}
-        </AnimatePresence>
-
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
           {expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
@@ -139,7 +123,7 @@ const NavbarComp = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
             <Nav.Item>
-              <Link activeClass="active" spy={true} href="home" to="home" 
+              <Link activeClass="active" spy={true} href="home" to="home"
                 duration={1000}
                 delay={0} onClick={() => { setExpanded(false) }} onSetActive={() => setShowLogo(false)} onSetInactive={() => setShowLogo(true)}>
                 Home
@@ -153,28 +137,35 @@ const NavbarComp = () => {
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="showcase" to="showcase" spy={true} hashSpy={true} 
+              <Link activeClass="active" href="features" to="features" spy={true} hashSpy={true}
+                duration={1000} offset={53}
+                delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
+                Features
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link activeClass="active" href="showcase" to="showcase" spy={true} hashSpy={true}
                 duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Showcase
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true} 
+              <Link activeClass="active" href="roadmap" to="roadmap" spy={true} hashSpy={true}
                 duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Roadmap
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="faqs" to="faqs" spy={true} hashSpy={true} 
+              <Link activeClass="active" href="faqs" to="faqs" spy={true} hashSpy={true}
                 duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 FAQs
               </Link>
             </Nav.Item>
             <Nav.Item>
-              <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true} 
+              <Link activeClass="active" href="team" to="team" spy={true} hashSpy={true}
                 duration={1000} offset={53}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
                 Team

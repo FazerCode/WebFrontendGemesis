@@ -26,6 +26,15 @@
     text-align: center;
   }
 
+  .header {
+    font-family: "Neo-Latina";
+    font-size: 50px;
+  }
+
+  .text {
+    font-family: "Nineteenth";
+  }
+
   .background {
     /* background */
     /* overflow-y: hidden ! important;
@@ -43,13 +52,11 @@
   .background2 {
     position: relative;
     left: 0px;
-    background-image: url('./resources/background_city_blue2.jpg');
+    background-image: url('./resources/background6.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    /* background-position: center; */
-    /* background-attachment: fixed; */
+    background-position: center;
+    background-attachment: fixed;
   }
   
   .App-logo {
@@ -84,9 +91,15 @@
     justify-content: space-between;
   }
 
-  .home, .showcase{
+  .home, .showcase {
     height: 100vh;
     margin-bottom: 80px;
+  }
+
+  .features {
+    flex: 1;
+    margin-top: 80px;
+    padding-top: 80px;
   }
 
   .roadmap {
@@ -97,6 +110,8 @@
     padding-top: 180px;
     flex: 1;
     font-size: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .about {
@@ -125,7 +140,6 @@
   }
   
   .showcase {
-    height: 100vh;
     margin-top: 80px;
     padding-top: 80px;
   }
@@ -215,7 +229,6 @@
     font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
     font-size: large;
   }
-
 
   .glow-on-hover {
     font-size: large;

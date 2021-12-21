@@ -7,6 +7,7 @@ import Showcase from './Showcase';
 import Roadmap from './Roadmap';
 import Team from './Team/Team';
 import Faq from './Faq';
+import Features from './Features';
 
 
 const Gemesis = () => {
@@ -16,6 +17,7 @@ const Gemesis = () => {
             <NavbarComp />
             <Home />
             <About />
+            <Features />
             <Showcase />
             <Roadmap />
             <Faq />

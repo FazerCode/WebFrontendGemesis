@@ -5,3 +5,26 @@ body {
 html {
     background-color: black;
 }
+
+@font-face {
+    font-family: 'Neo-Latina';
+    font-style: normal;
+    src: local('Neo-Latina'), url(./fonts/neo-latina.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nasalization';
+    font-style: normal;
+    src: local('Nasalization'), url(./fonts/nasalization-rg.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Destructobeam-Bold';
+    font-style: bold;
+    src: local('Destructobeam-Bold'), url(./fonts/destructobeambb_bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Nineteenth';
+    src: local('Ninteenth'), url(./fonts/Nineteenth.otf) format('truetype');
+}

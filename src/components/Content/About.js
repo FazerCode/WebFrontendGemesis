@@ -12,9 +12,9 @@ const About = () => {
     return (
         <div className="about">
 
-            <div className="container" >
+            <div className="container text" >
                 <div data-aos="fade-right" data-aos-id="super-duper" data-aos-offset="300" data-aos-easing="ease-in-sine" className="about-info" >
-                    <h1 >About</h1>
+                    <h1 className="header">ABOUT</h1>
                     <div>
                         <p> Year 2221. Moon Enceladus. Saturn. </p>
                         <p> Since we have abandoned Earth, a lot has happened. </p>

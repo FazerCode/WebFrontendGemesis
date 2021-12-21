@@ -15,6 +15,8 @@ import stone10 from "../../resources/stones/gemesis_10.png"
 import stone11 from "../../resources/stones/gemesis_11.png"
 import stone12 from "../../resources/stones/gemesis_12.png"
 import stone13 from "../../resources/stones/gemesis_13.png"
+import stone14 from "../../resources/stones/gemesis_14.png"
+import stone15 from "../../resources/stones/gemesis_15.png"
 
 const ImageSlider = () => {
     const [size, setSize] = useState([0, 0]);
@@ -75,10 +77,10 @@ const ImageSlider = () => {
         arrows: false,
     };
 
-    const propertiesSmallSize = {
+    const propertiesXsSize = {
         duration: 0,
         transitionDuration: 3000,
-        slidesToShow: 1.5,
+        slidesToShow: 1.1,
         slidesToScroll: 1,
         autoplay: true,
         indicators: false,
@@ -88,11 +90,11 @@ const ImageSlider = () => {
     return (
         <div className="showCase">
             <div className="container">
-                <h1>GΞMΞSIS Showcase</h1>
+                <h1 className="header">GEMESIS SHOWCASE</h1>
             </div>
             <div style={slider}>
                 {mediaQuery.matches ?
-                    <Slide {...propertiesSmallSize} >
+                    <Slide {...propertiesXsSize} >
                         <div style={style}>
                             <img style={imgStyle} src={stone1} alt="stone1"></img>
                         </div>
@@ -110,6 +112,34 @@ const ImageSlider = () => {
                         </div>
                         <div style={style}>
                             <img style={imgStyle} src={stone6} alt="stone6"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone7} alt="stone7"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone8} alt="stone8"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone11} alt="stone11"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone9} alt="stone9"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone10} alt="stone10"></img>
+                        </div>
+                       
+                        <div style={style}>
+                            <img style={imgStyle} src={stone12} alt="stone12"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone13} alt="stone13"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone14} alt="stone14"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyle} src={stone15} alt="stone15"></img>
                         </div>
                     </Slide>
                     :
@@ -153,6 +183,12 @@ const ImageSlider = () => {
                         </div>
                         <div style={style}>
                             <img style={imgStyleBig} src={stone13} alt="stone13"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone14} alt="stone14"></img>
+                        </div>
+                        <div style={style}>
+                            <img style={imgStyleBig} src={stone15} alt="stone15"></img>
                         </div>
                     </Slide>
                 }
