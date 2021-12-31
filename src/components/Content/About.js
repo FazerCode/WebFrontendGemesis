@@ -14,7 +14,7 @@ const About = () => {
 
             <div className="container text" >
                 <div data-aos="fade-right" data-aos-id="super-duper" data-aos-offset="300" data-aos-easing="ease-in-sine" className="about-info" >
-                    <h1 className="header">ABOUT</h1>
+                    <h1 className="header">STORY</h1>
                     <div>
                         <p> Year 2221. Moon Enceladus. Saturn. </p>
                         <p> Since we have abandoned Earth, a lot has happened. </p>
@@ -27,7 +27,7 @@ const About = () => {
                             of the establishment and the last one was mined 81 years ago. Poverty and scarcity of
                             resources affect the majority of the working class. </p>
                         <p>
-                            Meanwhile on the moon Enceladus, we the team of <b>GΞMΞSIS</b>, a handful of courageous prospectors and researchers,
+                            Meanwhile on the moon Enceladus, we the team of <b>GEMESIS</b>, a handful of courageous prospectors and researchers,
                             decide to launch the "Revive the Earth" project.
                             Minerals, rare stones and gemstones of the dying Earth are only owned
                             by the most powerful people and traded at unaffordable prices.
@@ -36,7 +36,7 @@ const About = () => {
                         </p>
                         <p> Stones found in the most hidden places on the destroyed earth,
                             processed by the best craftsmanship and stored in gravity boxes.
-                            The <b>GΞMΞSIS</b> Stones.
+                            The <b>GEMESIS</b> Stones.
                         </p>
                         <p>Now is the time to start redistributing the wealth over the entire population of Enceladus!!!
                             But this is just the beginning. </p>

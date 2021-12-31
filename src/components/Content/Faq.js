@@ -23,21 +23,21 @@ const Faq = () => {
         <div className="faqs" id="faqs" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }} data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <h1 className="header">FAQs</h1>
             <div style={{display: 'flex', flexDirection: 'column', flex: 1, position: 'relative', left: '15%', right: '15%', width: '70%'}}>
-                <Accordion style={{ marginBottom: '20px', borderRadius: '20px'}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                {/* <Accordion style={{ marginBottom: '20px', borderRadius: '20px'}} expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">When is the Mint Date?</Typography>
+                        <Typography fontFamily="Orbitron-Light">When is the Mint Date?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
+                        <Typography fontFamily="Orbitron-Light">
                             On the 2nd of January 2022 - Yes we start the new Year with a BANG!
                         </Typography>
                     </AccordionDetails>
-                </Accordion>
+                </Accordion> */}
                 <Accordion style={{ marginBottom: '20px', borderRadius: '20px'}} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon style={{color: 'white'}} />}
@@ -45,10 +45,10 @@ const Faq = () => {
                         id="panel2a-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">What is the Mint price?</Typography>
+                        <Typography fontFamily="Orbitron-Light">What is the Mint price?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
+                        <Typography fontFamily="Orbitron-Light">
                             0.08 ETH - subject to change
                         </Typography>
                     </AccordionDetails>
@@ -60,10 +60,10 @@ const Faq = () => {
                         id="panel3a-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">How to get Whitelisted?</Typography>
+                        <Typography fontFamily="Orbitron-Light">How to get Whitelisted?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
+                        <Typography fontFamily="Orbitron-Light">
                             You can either get whitelisted by participating on the invite-contest or by being active on the discord server
                         </Typography>
                     </AccordionDetails>
@@ -75,10 +75,10 @@ const Faq = () => {
                         id="panel24-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">Where can I buy a GΞMΞSIS?</Typography>
+                        <Typography fontFamily="Orbitron-Light">Where can I buy a GEMESIS?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
+                        <Typography fontFamily="Orbitron-Light">
                             The mint page will be available on the homepage and announced on Discord shortly before the launch
                         </Typography>
                     </AccordionDetails>
@@ -90,11 +90,11 @@ const Faq = () => {
                         id="panel5a-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">How many GΞMΞSIS will be available for sale?</Typography>
+                        <Typography fontFamily="Orbitron-Light">How many GEMESIS will be available for sale?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
-                            9669 unique GΞMΞSIS NFTs
+                        <Typography fontFamily="Orbitron-Light">
+                            9669 unique GEMESIS NFTs
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -105,10 +105,10 @@ const Faq = () => {
                         id="panel6a-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">How many traits does GΞMΞSIS have?</Typography>
+                        <Typography fontFamily="Orbitron-Light">How many traits does GEMESIS have?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
+                        <Typography fontFamily="Orbitron-Light">
                             In total there are 8 traits
                         </Typography>
                     </AccordionDetails>
@@ -120,10 +120,10 @@ const Faq = () => {
                         id="panel7a-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">Will there be any free mints?</Typography>
+                        <Typography fontFamily="Orbitron-Light">Will there be any free mints?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
+                        <Typography fontFamily="Orbitron-Light">
                             Yes, we plan limited free mints for selected NFT project holders.
                         </Typography>
                     </AccordionDetails>
@@ -135,11 +135,11 @@ const Faq = () => {
                         id="panel8a-header"
                         style={{color: 'white', backgroundColor: '#7B2482', borderRadius: '20px 20px 0px 0px' }}
                     >
-                        <Typography fontFamily="Nineteenth">How can I benefit from holding a GΞMΞSIS?</Typography>
+                        <Typography fontFamily="Orbitron-Light">How can I benefit from holding a GEMESIS?</Typography>
                     </AccordionSummary>
                     <AccordionDetails style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.8)'}}>
-                        <Typography fontFamily="Nineteenth">
-                            Royalties from secondary market sales will be gathered in a pool from which holders of GΞMΞSIS 
+                        <Typography fontFamily="Orbitron-Light">
+                            Royalties from secondary market sales will be gathered in a pool from which holders of GEMESIS 
                             will be able to withdraw ETH depending on the amount of their holdings.
 
                         </Typography>

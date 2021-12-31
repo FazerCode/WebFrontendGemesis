@@ -32,7 +32,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
-                                fontFamily="Nineteenth"
+                                fontFamily="Orbitron-Light"
                             >
                                 25 %
                             </TimelineOppositeContent>
@@ -48,10 +48,10 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
+                                <Typography variant="h7" color="#B955C3" component="span" fontFamily="Orbitron-Light">
                                     Giveaway
                                 </Typography>
-                                <Typography>Giveaway of 10 GΞMΞSIS NFTs
+                                <Typography fontFamily="Orbitron-Light">Giveaway of 10 GEMESIS NFTs
                                     to the first 25% of the minters</Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -60,7 +60,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
-                                fontFamily="Nineteenth"
+                                fontFamily="Orbitron-Light"
                             >
                                 50 %
                             </TimelineOppositeContent>
@@ -76,12 +76,12 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
+                                <Typography variant="h7" color="#B955C3" component="span" fontFamily="Orbitron-Light">
                                     Donation
                                 </Typography>
-                                <Typography fontFamily="Nineteenth">5 ETH Donation for amputee victims of blood diamonds
+                                <Typography fontFamily="Orbitron-Light">5 ETH Donation for amputee victims of blood diamonds
                                 </Typography>
-                                <Typography fontFamily="Nineteenth">
+                                <Typography fontFamily="Orbitron-Light">
                                     1 ETH to a lucky community member
                                 </Typography>
                             </TimelineContent>
@@ -91,7 +91,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
-                                fontFamily="Nineteenth"
+                                fontFamily="Orbitron-Light"
                             >
                                 75 %
                             </TimelineOppositeContent>
@@ -107,10 +107,10 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
+                                <Typography variant="h7" color="#B955C3" component="span" fontFamily="Orbitron-Light">
                                     Eternal Stones
                                 </Typography>
-                                <Typography fontFamily="Nineteenth">Drop of the 5 Eternal stones which come with very unique Utility</Typography>
+                                <Typography fontFamily="Orbitron-Light">Drop of the 5 Eternal stones which come with very unique Utility</Typography>
                             </TimelineContent>
                         </TimelineItem>
                         <TimelineItem>
@@ -118,7 +118,7 @@ const Roadmap = () => {
                                 sx={{ m: 'auto 0' }}
                                 align="right"
                                 variant="h6"
-                                fontFamily="Nineteenth"
+                                fontFamily="Orbitron-Light"
                             >
                                 100 %
                             </TimelineOppositeContent>
@@ -134,11 +134,11 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
+                                <Typography variant="h7" color="#B955C3" component="span" fontFamily="Orbitron-Light">
                                     Re-Distribute
                                 </Typography>
-                                <Typography fontFamily="Nineteenth">
-                                    Deploying the smart contract which distributes the secondary market sales to all GΞMΞSIS holders
+                                <Typography fontFamily="Orbitron-Light">
+                                    Deploying the smart contract which distributes the secondary market sales to all GEMESIS holders
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -148,7 +148,7 @@ const Roadmap = () => {
                                 align="right"
                                 variant="h6"
                                 color="#B955C3"
-                                fontFamily="Nineteenth"
+                                fontFamily="Orbitron-Light"
                             >
                                 FUTURE
                             </TimelineOppositeContent>
@@ -164,17 +164,16 @@ const Roadmap = () => {
                                 <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
                             </TimelineSeparator>
                             <TimelineContent >
-                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
+                                <Typography variant="h7" color="#B955C3" component="span" fontFamily="Orbitron-Light">
                                     Team Tattoos
                                 </Typography>
-                                <Typography fontFamily="Nineteenth" style={{ marginBottom: 25 }}>The GΞMΞSIS team is getting a tattoo with the GΞMΞSIS logo
+                                <Typography fontFamily="Orbitron-Light" style={{ marginBottom: 25 }}>The GEMESIS team is getting a tattoo with the GEMESIS logo
                                     to show the dedication to the project. </Typography>
-                                <Typography variant="h6" color="#B955C3" component="span" fontFamily="Nineteenth">
-                                    GΞMΞSIS Factory
+                                <Typography variant="h7" color="#B955C3" component="span" fontFamily="Orbitron-Light">
+                                    GEMESIS Factory
                                 </Typography>
-                                <Typography fontFamily="Nineteenth">Starting to implement GΞMΞSIS Factory
-                                    ... stay tuned</Typography>
-                                <Typography fontFamily="Nineteenth">
+                                <Typography fontFamily="Orbitron-Light">Starting to implement GEMESIS Factory</Typography>
+                                <Typography fontFamily="Orbitron-Light">
                                     ... stay tuned</Typography>
                             </TimelineContent>
                         </TimelineItem>

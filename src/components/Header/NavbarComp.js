@@ -53,9 +53,9 @@ const Styles = styled.div`
   }
 
   a {
-    color: white;
-    font-family: "Nineteenth";
-    font-size: 22px;
+    color: lightgray;
+    font-family: "Orbitron-Light";
+    font-size: 18px;
     font-weight: bold;
     -webkit-text-stroke: 0.2px white;
     padding: 10px;
@@ -118,7 +118,7 @@ const NavbarComp = () => {
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}>
-          {expanded ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
+          {expanded ? <AiOutlineClose color="lightgray" /> : <FaBars color="lightgray" />}
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav>
@@ -133,7 +133,7 @@ const NavbarComp = () => {
               <Link activeClass="active" href="about" to="about" spy={true} hashSpy={true}
                 duration={1000} offset={52}
                 delay={0} saveHashHistory={false} onClick={() => setExpanded(false)}>
-                About
+                Story
               </Link>
             </Nav.Item>
             <Nav.Item>

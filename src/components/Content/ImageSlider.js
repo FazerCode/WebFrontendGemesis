@@ -2,21 +2,21 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css';
-import stone1 from "../../resources/stones/gemesis_1.png"
-import stone2 from "../../resources/stones/gemesis_2.png"
-import stone3 from "../../resources/stones/gemesis_3.png"
-import stone4 from "../../resources/stones/gemesis_4.png"
-import stone5 from "../../resources/stones/gemesis_5.png"
-import stone6 from "../../resources/stones/gemesis_6.png"
-import stone7 from "../../resources/stones/gemesis_7.png"
-import stone8 from "../../resources/stones/gemesis_8.png"
-import stone9 from "../../resources/stones/gemesis_9.png"
-import stone10 from "../../resources/stones/gemesis_10.png"
-import stone11 from "../../resources/stones/gemesis_11.png"
-import stone12 from "../../resources/stones/gemesis_12.png"
-import stone13 from "../../resources/stones/gemesis_13.png"
-import stone14 from "../../resources/stones/gemesis_14.png"
-import stone15 from "../../resources/stones/gemesis_15.png"
+import stone1 from "../../resources/stones/gemesis_1.jpg"
+import stone2 from "../../resources/stones/gemesis_2.jpg"
+import stone3 from "../../resources/stones/gemesis_3.jpg"
+import stone4 from "../../resources/stones/gemesis_4.jpg"
+import stone5 from "../../resources/stones/gemesis_5.jpg"
+import stone6 from "../../resources/stones/gemesis_6.jpg"
+import stone7 from "../../resources/stones/gemesis_7.jpg"
+import stone8 from "../../resources/stones/gemesis_8.jpg"
+import stone9 from "../../resources/stones/gemesis_9.jpg"
+import stone10 from "../../resources/stones/gemesis_10.jpg"
+import stone11 from "../../resources/stones/gemesis_11.jpg"
+import stone12 from "../../resources/stones/gemesis_12.jpg"
+import stone13 from "../../resources/stones/gemesis_13.jpg"
+import stone14 from "../../resources/stones/gemesis_14.jpg"
+import stone15 from "../../resources/stones/gemesis_15.jpg"
 
 const ImageSlider = () => {
     const [size, setSize] = useState([0, 0]);

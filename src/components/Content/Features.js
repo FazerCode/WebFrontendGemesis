@@ -9,8 +9,8 @@ const CardContainer = styled.div`
     }
     padding: 20px;
     background: black;
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     margin: 35px;
     color: white;
     text-align: center;
@@ -47,7 +47,7 @@ const Features = () => {
                 <FeatureContainer >
                     <CardContainer>
                         <Header>Supply</Header>
-                        <h5>9669 GΞMΞSIS </h5>
+                        <h5>9669 GEMESIS </h5>
                         <p>unique and generatively created NFTs that provide holders with utility and make them eligable
                             to mint their metaverse models.</p>
                     </CardContainer>
@@ -64,7 +64,7 @@ const Features = () => {
                         <h5>5%</h5>
                         <p>secondary market sales will be gathered in a pool and redistributed to holders!</p>
                         <h5>2.5%</h5>
-                        <p>to the GΞMΞSIS team.</p>
+                        <p>to the GEMESIS team.</p>
                     </CardContainer>
                 </FeatureContainer>
             </div>

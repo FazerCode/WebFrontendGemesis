@@ -8,7 +8,7 @@ import {
   Heading,
   Image,
 } from "./FooterStyles";
-import { FaDiscord, FaTwitter } from 'react-icons/fa';
+import { FaDiscord, FaTwitter, FaInstagram, FaTiktok } from 'react-icons/fa';
 import logo from "../../resources/gemesis_logo_purple.png";
 
 
@@ -19,7 +19,7 @@ const Footer = () => {
         <Row>
           <Column>
             <Image height="auto" src={logo} alt="logo" />
-            <p>©2021 GEMESIS. All rights reserved.</p>
+            <p style={{marginTop: 35}}>©2021 GEMESIS. All rights reserved.</p>
           </Column>
 
           <Column>
@@ -32,6 +32,16 @@ const Footer = () => {
             <FooterLink href="https://discord.gg/gemesis" target="_blank" rel="noopener noreferrer">
               <span>
                 <FaDiscord />
+              </span>
+            </FooterLink>
+            <FooterLink href="https://www.instagram.com/gemesis_nft/" target="_blank" rel="noopener noreferrer">
+              <span>
+                <FaInstagram />
+              </span>
+            </FooterLink>
+            <FooterLink href="https://www.tiktok.com/@gemesis_nft/" target="_blank" rel="noopener noreferrer">
+              <span>
+                <FaTiktok />
               </span>
             </FooterLink>
           </Column>

@@ -11,7 +11,7 @@
 
   body {
     margin: 0px;
-    color: white;
+    color: lightgray;
     position: relative;
     width: 100%;
     height: auto;
@@ -27,12 +27,15 @@
   }
 
   .header {
-    font-family: "Neo-Latina";
+    font-family: "Earth-Orbiter";
     font-size: 50px;
+    color: lightgray;
   }
 
   .text {
-    font-family: "Nineteenth";
+    font-family: "Orbitron-Light";
+    font-size: 1s;
+    color: lightgray;
   }
 
   .background {
@@ -109,7 +112,7 @@
   .about-info {
     padding-top: 180px;
     flex: 1;
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -137,6 +140,7 @@
   .faqs {
     height: 100vh;
     padding-top: 180px;
+    margin-bottom: 120px;
   }
   
   .showcase {

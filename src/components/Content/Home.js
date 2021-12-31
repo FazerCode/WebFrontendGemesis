@@ -36,9 +36,10 @@ const Info = styled.div`
 
 const InfoText = styled.h4`
     margin-bottom: 15px;
-    font-family: "Nineteenth";
+    font-size: 20px;
+    font-family: "Orbitron-Light";
 `
-const Heading = styled.h2`
+const Heading = styled.h1`
     margin-bottom: 18px;
     text-align: center;
 `
@@ -48,7 +49,7 @@ const Home = () => {
         <div className="background" id="home">
             <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} >
                 <div className="container home" >
-                    <div className="container" style={{ marginTop: 150, color: 'white' }}>
+                    <div className="container" style={{ marginTop: 150, marginBottom: 40, color: 'white' }}>
                         <Link href="/" id="logo" >
                             <Logo width="140px" height="auto" src={purpleLogo} alt="logo" />
                         </Link>
@@ -56,10 +57,10 @@ const Home = () => {
 
                 </div>
                 <Info>
-                    <Heading className='header'>Welcome to GEMESIS!</Heading>
-                    <InfoText>GΞMΞSIS is a set of <b style={{color: "#B955C3"}}>9669 gemstones</b> from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
-                    <InfoText>Besides the awesome look, GΞMΞSIS is a project that want to <b style={{color: "#B955C3"}}>redistribute earnings</b> back to its holders!</InfoText>
-                    <InfoText><b style={{color: "#B955C3"}}>Mint</b> on the <b style={{color: "#B955C3"}}>2nd January 2021</b>!</InfoText>
+                    <Heading style={{fontFamily: "Earth-Orbiter"}}>Welcome to GEMESIS!</Heading>
+                    <InfoText>GEMESIS is a set of <b style={{color: "#B955C3"}}>9669 gemstones</b> from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
+                    <InfoText>A new era of <b style={{color: "#B955C3"}}>metaverse NFTs</b> that <b style={{color: "#B955C3"}}> redistribute earnings</b> back to its holders!</InfoText>
+                    {/* <InfoText><b style={{color: "#B955C3"}}>Mint</b> on the <b style={{color: "#B955C3"}}>2nd January 2021</b>!</InfoText> */}
                 </Info>
             </motion.div>
         </div>
