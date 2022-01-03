@@ -10,7 +10,7 @@ const web3 = createAlchemyWeb3(alchemyKey);
 // const contractABI = require('./contract-abi.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
 const contractABI = require('./contract-abi2.json') //!!CHANGE THE CONTRACT ABI ALSO FITTIN FOR OUR CONTRACT IF CHANGE NEEDED!!
 // const contractAddress = "0x6D3bCd6C1E89956BD92bD4b679191abD7798174d"; //HERE WE SHOULD ADD OUR CONTRACT ADDRESS
-const contractAddress = "0x5b3126A10bad912f00b6a84376B95e99F8b9A9d2";
+const contractAddress = "0x683194DCd89Ba852eBB7dB7Aa7f37E97263E1Ed6";
 
 
 // var dateTimeStamp = web3.eth.getBlock(1920050).timestamp //outputs 1469021581 
