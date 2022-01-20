@@ -58,7 +58,7 @@ const Home = () => {
                 </div>
                 <Info>
                     <Heading style={{fontFamily: "Earth-Orbiter"}}>Welcome to GEMESIS!</Heading>
-                    <InfoText>GEMESIS is a set of <b style={{color: "#B955C3"}}>9669 gemstones</b> from earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
+                    <InfoText>GEMESIS is a set of <b style={{color: "#B955C3"}}>9669 gemstones</b> from Earth, processed by best craftsmanship to find a new place in the NFT space and metaverse.</InfoText>
                     <InfoText>A new era of <b style={{color: "#B955C3"}}>metaverse NFTs</b> that <b style={{color: "#B955C3"}}> redistribute earnings</b> back to its holders!</InfoText>
                     {/* <InfoText><b style={{color: "#B955C3"}}>Mint</b> on the <b style={{color: "#B955C3"}}>2nd January 2021</b>!</InfoText> */}
                 </Info>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import logo from "../../resources/gemesis_logo_purple.png";
 import Footer from '../Footer/Footer';
 import { NavLink } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 
 const Container = styled.div`
     position: absolute;
@@ -16,7 +17,7 @@ const Container = styled.div`
 `;
 
 const Logo = styled.img`
-    padding-top: 20px;
+    padding-top: 140px;
     width: 150px;
 `;
 
@@ -37,7 +38,9 @@ const Terms = () => {
         <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} >
             <Container>
                 <NavLink to="/" className="logo"><Logo src={logo} alt="logo" /></NavLink>
-                <NavLink className="backLink" to="/">  Back to Main Page</NavLink>
+                <Button className="backLink"  href="/" variant="outline-primary">
+                    Back to Main Page
+                </Button>
                 <Heading>Terms and Conditions</Heading>
                 <Content>
                     <p>Welcome to Gemesis!</p>

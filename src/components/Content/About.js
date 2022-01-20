@@ -34,7 +34,7 @@ const About = () => {
                             Therefore, we are now heading to Earth to collect these long-forgotten materials and offer people a new kind
                             of sustainable investment.
                         </p>
-                        <p> Stones found in the most hidden places on the destroyed earth,
+                        <p> Stones found in the most hidden places on the destroyed Earth,
                             processed by the best craftsmanship and stored in gravity boxes.
                             The <b>GEMESIS</b> Stones.
                         </p>
