@@ -14,6 +14,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import { styled } from '@mui/material/styles';
 import styles from "./styles.js";
+import { getTotalSupply, getMaxMintAmount, getMaxSupply, getNftPrice } from "../../utils/interact.js";
 
 const MintButton = styled(Button)(() => ({
   color: "white",
@@ -22,10 +23,10 @@ const MintButton = styled(Button)(() => ({
 const ConnectButton = styled(Button)(() => ({
   color: "rgb(120, 39, 130)",
   borderColor: "rgb(120, 39, 130)",
-  "&:hover":{
+  "&:hover": {
     color: "rgb(149, 102, 164)",
     borderColor: "rgb(149, 102, 164)"
-},
+  },
 
 }));
 
@@ -35,17 +36,19 @@ const Minter = (props) => {
   //State variables
   const [walletAddress, setWallet] = useState("");    //users wallet address
   const [status, setStatus] = useState("");  //User replies with string written to contract
+  const [maxMintAmount, setMaxMintAmount] = useState();
   const [mintAmount, setMintAmount] = useState(1);
   const [errorText, setErrorText] = useState("");
   const [mintSuccess, setMintSuccess] = useState("");
-  // the following attributes should be called from the contract
-  const [totalSupply, setTotalSupply] = useState(9669);
+  const [maxSupply, setMaxSupply] = useState(0);
   const [alreadyMinted, setAlreadyMinted] = useState(0);
+  const [nftPrice, setNftPrice] = useState(0);
 
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   });
+
   useEffect(() => {
     async function connect() {
       const { address, status } = await getCurrentWalletConnected();
@@ -54,6 +57,20 @@ const Minter = (props) => {
       addWalletListener();
     }
     connect();
+
+    const setup = async () => {
+      const supply = await getMaxSupply();
+      const mintAmount = await getMaxMintAmount();
+      const totalSupp = await getTotalSupply();
+      const price = await getNftPrice();
+
+      setMaxSupply(supply);
+      setMaxMintAmount(mintAmount);
+      setAlreadyMinted(totalSupp);
+      setNftPrice(price);
+    }
+    setup();
+
   }, []);
 
   const connectWalletPressed = async () => {
@@ -63,10 +80,11 @@ const Minter = (props) => {
   };
 
   const onMintPressed = async () => {
+    console.log(maxMintAmount);
+    console.log(mintAmount);
     if (mintAmount > 0 && mintAmount <= 20) {
       setMintSuccess("true");
-      console.log(mintAmount);
-      const { status } = await mintNFT(mintAmount);
+      const { status } = await mintNFT(mintAmount, nftPrice);
       setStatus(status);
     } else {
       setMintSuccess("false");
@@ -80,12 +98,11 @@ const Minter = (props) => {
     setMintSuccess("");
     e.preventDefault();
     if (e.target.value > 0 && e.target.value <= 20) {
+      setMintAmount(e.target.value);
       setErrorText("");
     } else {
       setErrorText('Amount should be between 1 and 20');
     }
-    setMintAmount(e.target.value);
-
   }
 
 
@@ -131,9 +148,9 @@ const Minter = (props) => {
             }}
           >
             <h1 id="title">💎 Mint your GΞMΞSIS💎 </h1>
-            <h4>Price: 0.08 ETH</h4>
-            <h4>Amount: 1-20 per tx</h4>
-            <h4>Already minted: {alreadyMinted}/{totalSupply}</h4>
+            <h4>Price: {nftPrice} ETH</h4>
+            <h4>Amount: {maxMintAmount} per tx</h4>
+            <h4>Already minted: {alreadyMinted}/{maxSupply}</h4>
             <TextField
               style={{
                 backgroundColor: 'rgba(0,0,0,0.5)',
@@ -156,13 +173,14 @@ const Minter = (props) => {
                   root: classes.root
                 }
               }}
+              value={mintAmount}
               onChange={handleChange.bind(this)}
               variant="filled"
               color="primary"
             />
 
             <MintButton className="glow-on-hover" id="mintButton" onClick={onMintPressed}>
-              MINT (Coming soon...)
+              MINT your GΞMΞSIS
             </MintButton>
 
             {mintSuccess === "" &&
